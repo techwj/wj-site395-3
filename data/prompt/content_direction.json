@@ -1,0 +1,929 @@
+{
+  "contentDirections": [
+    {
+      "id": "1",
+      "name": "Health and Medical",
+      "name_zh": "健康与医疗",
+      "subDirections": [
+        {
+          "en": "Chronic Disease Management Guide",
+          "zh": "慢性病管理指南",
+          "is_used": false
+        },
+        {
+          "en": "Nutrition and Diet Plans",
+          "zh": "营养饮食方案",
+          "is_used": false
+        },
+        {
+          "en": "Exercise and Fitness Plans",
+          "zh": "运动健身计划",
+          "is_used": false
+        },
+        {
+          "en": "Mental Health Advice",
+          "zh": "心理健康建议",
+          "is_used": false
+        },
+        {
+          "en": "Sleep Improvement Methods",
+          "zh": "睡眠改善方法",
+          "is_used": false
+        },
+        {
+          "en": "Traditional Chinese Medicine",
+          "zh": "中医养生知识",
+          "is_used": false
+        },
+        {
+          "en": "Common Disease Prevention",
+          "zh": "常见疾病预防",
+          "is_used": false
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Education and Learning",
+      "name_zh": "教育学习",
+      "subDirections": [
+        {
+          "en": "Language Learning Techniques",
+          "zh": "语言学习技巧",
+          "is_used": false
+        },
+        {
+          "en": "Exam Preparation Strategies",
+          "zh": "考试备考攻略",
+          "is_used": false
+        },
+        {
+          "en": "Learning Methods Guide",
+          "zh": "学习方法指导",
+          "is_used": false
+        },
+        {
+          "en": "Career Development Planning",
+          "zh": "职业发展规划",
+          "is_used": false
+        },
+        {
+          "en": "Skill Enhancement Tutorials",
+          "zh": "技能提升教程",
+          "is_used": false
+        },
+        {
+          "en": "Online Course Recommendations",
+          "zh": "在线课程推荐",
+          "is_used": false
+        },
+        {
+          "en": "Learning Resources Compilation",
+          "zh": "学习资源整理",
+          "is_used": false
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Technology and Digital",
+      "name_zh": "科技数码",
+      "subDirections": [
+        {
+          "en": "Software Usage Tutorials",
+          "zh": "软件使用教程",
+          "is_used": false
+        },
+        {
+          "en": "Digital Product Reviews",
+          "zh": "数码产品评测",
+          "is_used": false
+        },
+        {
+          "en": "Programming Technology Guide",
+          "zh": "编程技术指南",
+          "is_used": false
+        },
+        {
+          "en": "AI Applications",
+          "zh": "人工智能应用",
+          "is_used": false
+        },
+        {
+          "en": "Cybersecurity Knowledge",
+          "zh": "网络安全知识",
+          "is_used": false
+        },
+        {
+          "en": "Smart Home Solutions",
+          "zh": "智能家居方案",
+          "is_used": false
+        },
+        {
+          "en": "Digital Product Selection",
+          "zh": "数码产品选购",
+          "is_used": false
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Finance and Investment",
+      "name_zh": "金融理财",
+      "subDirections": [
+        {
+          "en": "Investment and Financial Guide",
+          "zh": "投资理财指南",
+          "is_used": false
+        },
+        {
+          "en": "Personal Financial Management",
+          "zh": "个人财务管理",
+          "is_used": false
+        },
+        {
+          "en": "Insurance Knowledge",
+          "zh": "保险知识普及",
+          "is_used": false
+        },
+        {
+          "en": "Tax Planning Advice",
+          "zh": "税务规划建议",
+          "is_used": false
+        },
+        {
+          "en": "Retirement Planning",
+          "zh": "退休计划制定",
+          "is_used": false
+        },
+        {
+          "en": "Financial Tools Usage",
+          "zh": "理财工具使用",
+          "is_used": false
+        },
+        {
+          "en": "Financial Product Analysis",
+          "zh": "金融产品分析",
+          "is_used": false
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Home and Living",
+      "name_zh": "家居生活",
+      "subDirections": [
+        {
+          "en": "Interior Design Guide",
+          "zh": "装修设计指南",
+          "is_used": false
+        },
+        {
+          "en": "Furniture Selection Advice",
+          "zh": "家具选购建议",
+          "is_used": false
+        },
+        {
+          "en": "Organization Tips",
+          "zh": "收纳整理技巧",
+          "is_used": false
+        },
+        {
+          "en": "Home Cleaning Methods",
+          "zh": "家居清洁方法",
+          "is_used": false
+        },
+        {
+          "en": "Indoor Plant Care",
+          "zh": "室内植物养护",
+          "is_used": false
+        },
+        {
+          "en": "Home Feng Shui",
+          "zh": "家居风水知识",
+          "is_used": false
+        },
+        {
+          "en": "Smart Home Solutions",
+          "zh": "智能家居方案",
+          "is_used": false
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Food and Cooking",
+      "name_zh": "美食烹饪",
+      "subDirections": [
+        {
+          "en": "Recipe Tutorials",
+          "zh": "菜谱教程",
+          "is_used": false
+        },
+        {
+          "en": "Ingredient Selection Guide",
+          "zh": "食材选购指南",
+          "is_used": false
+        },
+        {
+          "en": "Kitchen Tips",
+          "zh": "厨房技巧分享",
+          "is_used": false
+        },
+        {
+          "en": "Dietary Health Knowledge",
+          "zh": "饮食健康知识",
+          "is_used": false
+        },
+        {
+          "en": "Food Culture Introduction",
+          "zh": "美食文化介绍",
+          "is_used": false
+        },
+        {
+          "en": "Restaurant Recommendations",
+          "zh": "餐厅推荐",
+          "is_used": false
+        },
+        {
+          "en": "Food Photography Tips",
+          "zh": "美食摄影技巧",
+          "is_used": false
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Travel and Transportation",
+      "name_zh": "旅游出行",
+      "subDirections": [
+        {
+          "en": "Travel Guides",
+          "zh": "旅游攻略",
+          "is_used": false
+        },
+        {
+          "en": "Attraction Recommendations",
+          "zh": "景点推荐",
+          "is_used": false
+        },
+        {
+          "en": "Transportation Guide",
+          "zh": "交通指南",
+          "is_used": false
+        },
+        {
+          "en": "Accommodation Selection",
+          "zh": "住宿选择",
+          "is_used": false
+        },
+        {
+          "en": "Food Maps",
+          "zh": "美食地图",
+          "is_used": false
+        },
+        {
+          "en": "Cultural Experiences",
+          "zh": "文化体验",
+          "is_used": false
+        },
+        {
+          "en": "Travel Gear Recommendations",
+          "zh": "旅行装备推荐",
+          "is_used": false
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Career Development",
+      "name_zh": "职场发展",
+      "subDirections": [
+        {
+          "en": "Resume Writing Tips",
+          "zh": "简历制作技巧",
+          "is_used": true
+        },
+        {
+          "en": "Interview Preparation Guide",
+          "zh": "面试准备指南",
+          "is_used": true
+        },
+        {
+          "en": "Workplace Communication Skills",
+          "zh": "职场沟通技巧",
+          "is_used": true
+        },
+        {
+          "en": "Leadership Development",
+          "zh": "领导力培养",
+          "is_used": true
+        },
+        {
+          "en": "Career Planning Advice",
+          "zh": "职业规划建议",
+          "is_used": true
+        },
+        {
+          "en": "Work Skill Enhancement",
+          "zh": "工作技能提升",
+          "is_used": true
+        },
+        {
+          "en": "Workplace Relationships",
+          "zh": "职场人际关系",
+          "is_used": true
+        },
+        {
+          "en": "Remote Work Skills",
+          "zh": "远程工作技能",
+          "is_used": true
+        },
+        {
+          "en": "Professional Certification Guide",
+          "zh": "专业认证指南",
+          "is_used": true
+        },
+        {
+          "en": "Cross-cultural Communication",
+          "zh": "跨文化沟通",
+          "is_used": true
+        },
+        {
+          "en": "Work-Life Balance",
+          "zh": "工作生活平衡",
+          "is_used": true
+        },
+        {
+          "en": "Career Transition Strategy",
+          "zh": "职业转型策略",
+          "is_used": true
+        },
+        {
+          "en": "Workplace Stress Management",
+          "zh": "职场压力管理",
+          "is_used": false
+        },
+        {
+          "en": "Project Management Skills",
+          "zh": "项目管理技能",
+          "is_used": false
+        },
+        {
+          "en": "Business Etiquette",
+          "zh": "商务礼仪",
+          "is_used": false
+        },
+        {
+          "en": "Negotiation Skills",
+          "zh": "谈判技巧",
+          "is_used": false
+        },
+        {
+          "en": "Personal Branding",
+          "zh": "个人品牌建设",
+          "is_used": false
+        },
+        {
+          "en": "Office Politics Navigation",
+          "zh": "职场政治处理",
+          "is_used": false
+        },
+        {
+          "en": "International Career Development",
+          "zh": "国际职业发展",
+          "is_used": false
+        },
+        {
+          "en": "Workplace Innovation",
+          "zh": "职场创新能力",
+          "is_used": false
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Parenting and Education",
+      "name_zh": "育儿教育",
+      "subDirections": [
+        {
+          "id": "1",
+          "en": "Early Education Methods",
+          "zh": "早期教育方法",
+          "is_used": true
+        },
+        {
+          "id": "2",
+          "en": "Child Psychology Development",
+          "zh": "儿童心理发展",
+          "is_used": true
+        },
+        {
+          "id": "3",
+          "en": "Parent-Child Activities",
+          "zh": "亲子活动建议",
+          "is_used": true
+        },
+        {
+          "id": "4",
+          "en": "Children's Nutrition Guide",
+          "zh": "儿童营养指南",
+          "is_used": true
+        },
+        {
+          "id": "5",
+          "en": "Educational Philosophy",
+          "zh": "教育理念分享",
+          "is_used": true
+        },
+        {
+          "id": "6",
+          "en": "Child Safety Knowledge",
+          "zh": "儿童安全知识",
+          "is_used": true
+        },
+        {
+          "id": "7",
+          "en": "Special Education",
+          "zh": "特殊儿童教育",
+          "is_used": true
+        },
+        {
+          "id": "8",
+          "en": "Digital Learning Resources",
+          "zh": "数字化学习资源",
+          "is_used": true
+        },
+        {
+          "id": "9",
+          "en": "Homework Management Skills",
+          "zh": "作业管理技巧",
+          "is_used": true
+        },
+        {
+          "id": "10",
+          "en": "Multiple Intelligence Development",
+          "zh": "多元智能开发",
+          "is_used": false
+        },
+        {
+          "id": "11",
+          "en": "Social Skills Training",
+          "zh": "社交能力培养",
+          "is_used": false
+        },
+        {
+          "id": "12",
+          "en": "Learning Disability Support",
+          "zh": "学习障碍支持",
+          "is_used": false
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Fashion and Beauty",
+      "name_zh": "时尚美妆",
+      "subDirections": [
+        {
+          "en": "Outfit Matching Tips",
+          "zh": "穿搭搭配技巧",
+          "is_used": false
+        },
+        {
+          "en": "Makeup Tutorials",
+          "zh": "美妆教程",
+          "is_used": false
+        },
+        {
+          "en": "Skincare Knowledge",
+          "zh": "护肤知识",
+          "is_used": false
+        },
+        {
+          "en": "Hair Design",
+          "zh": "发型设计",
+          "is_used": false
+        },
+        {
+          "en": "Fashion Trends",
+          "zh": "时尚趋势",
+          "is_used": false
+        },
+        {
+          "en": "Brand Recommendations",
+          "zh": "品牌推荐",
+          "is_used": false
+        },
+        {
+          "en": "Personal Image Design",
+          "zh": "个人形象设计",
+          "is_used": false
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Sports and Fitness",
+      "name_zh": "运动健身",
+      "subDirections": [
+        {
+          "en": "Fitness Plan Development",
+          "zh": "健身计划制定",
+          "is_used": false
+        },
+        {
+          "en": "Exercise Technique Guide",
+          "zh": "运动技巧指导",
+          "is_used": false
+        },
+        {
+          "en": "Nutrition and Diet",
+          "zh": "饮食营养搭配",
+          "is_used": false
+        },
+        {
+          "en": "Sports Injury Prevention",
+          "zh": "运动损伤预防",
+          "is_used": false
+        },
+        {
+          "en": "Fitness Equipment Usage",
+          "zh": "健身器材使用",
+          "is_used": false
+        },
+        {
+          "en": "Sports Psychology",
+          "zh": "运动心理调节",
+          "is_used": false
+        },
+        {
+          "en": "Fitness Progress Evaluation",
+          "zh": "健身效果评估",
+          "is_used": false
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Automotive and Transportation",
+      "name_zh": "汽车交通",
+      "subDirections": [
+        {
+          "en": "Car Buying Guide",
+          "zh": "购车指南",
+          "is_used": false
+        },
+        {
+          "en": "Maintenance Knowledge",
+          "zh": "保养维护知识",
+          "is_used": false
+        },
+        {
+          "en": "Driving Skills",
+          "zh": "驾驶技巧",
+          "is_used": false
+        },
+        {
+          "en": "Traffic Regulations",
+          "zh": "交通法规解读",
+          "is_used": false
+        },
+        {
+          "en": "Car Modification Advice",
+          "zh": "汽车改装建议",
+          "is_used": false
+        },
+        {
+          "en": "New Energy Vehicle Knowledge",
+          "zh": "新能源车知识",
+          "is_used": false
+        },
+        {
+          "en": "Used Car Selection",
+          "zh": "二手车选购",
+          "is_used": false
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Pet Care",
+      "name_zh": "宠物养护",
+      "subDirections": [
+        {
+          "en": "Pet Training Methods",
+          "zh": "宠物训练方法",
+          "is_used": false
+        },
+        {
+          "en": "Pet Health Care",
+          "zh": "宠物健康护理",
+          "is_used": false
+        },
+        {
+          "en": "Pet Diet Guide",
+          "zh": "宠物饮食指南",
+          "is_used": false
+        },
+        {
+          "en": "Pet Behavior Interpretation",
+          "zh": "宠物行为解读",
+          "is_used": false
+        },
+        {
+          "en": "Pet Product Recommendations",
+          "zh": "宠物用品推荐",
+          "is_used": false
+        },
+        {
+          "en": "Pet Medical Knowledge",
+          "zh": "宠物医疗知识",
+          "is_used": false
+        },
+        {
+          "en": "Pet Grooming Techniques",
+          "zh": "宠物美容技巧",
+          "is_used": false
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Eco-Friendly Living",
+      "name_zh": "环保生活",
+      "subDirections": [
+        {
+          "en": "Waste Sorting Guide",
+          "zh": "垃圾分类指南",
+          "is_used": false
+        },
+        {
+          "en": "Energy Saving Methods",
+          "zh": "节能减排方法",
+          "is_used": false
+        },
+        {
+          "en": "Sustainable Lifestyle",
+          "zh": "可持续生活方式",
+          "is_used": false
+        },
+        {
+          "en": "Eco-Friendly Products",
+          "zh": "环保产品推荐",
+          "is_used": false
+        },
+        {
+          "en": "Green Transportation",
+          "zh": "绿色出行建议",
+          "is_used": false
+        },
+        {
+          "en": "Eco-Friendly Materials",
+          "zh": "环保材料使用",
+          "is_used": false
+        },
+        {
+          "en": "Ecological Protection",
+          "zh": "生态保护知识",
+          "is_used": false
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "name": "Mental Health",
+      "name_zh": "心理健康",
+      "subDirections": [
+        {
+          "en": "Stress Management Methods",
+          "zh": "压力管理方法",
+          "is_used": false
+        },
+        {
+          "en": "Emotional Regulation Techniques",
+          "zh": "情绪调节技巧",
+          "is_used": false
+        },
+        {
+          "en": "Interpersonal Relationship Handling",
+          "zh": "人际关系处理",
+          "is_used": false
+        },
+        {
+          "en": "Mental Illness Prevention",
+          "zh": "心理疾病预防",
+          "is_used": false
+        },
+        {
+          "en": "Meditation and Relaxation Guide",
+          "zh": "冥想放松指南",
+          "is_used": false
+        },
+        {
+          "en": "Psychological Counseling Knowledge",
+          "zh": "心理咨询知识",
+          "is_used": false
+        },
+        {
+          "en": "Self-Awareness Enhancement",
+          "zh": "自我认知提升",
+          "is_used": false
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "name": "Legal Knowledge",
+      "name_zh": "法律知识",
+      "subDirections": [
+        {
+          "en": "Marriage and Family Law",
+          "zh": "婚姻家庭法律",
+          "is_used": false
+        },
+        {
+          "en": "Labor Rights Protection",
+          "zh": "劳动权益保护",
+          "is_used": false
+        },
+        {
+          "en": "Contract Law Knowledge",
+          "zh": "合同法律知识",
+          "is_used": false
+        },
+        {
+          "en": "Intellectual Property Protection",
+          "zh": "知识产权保护",
+          "is_used": false
+        },
+        {
+          "en": "Consumer Rights",
+          "zh": "消费者权益",
+          "is_used": false
+        },
+        {
+          "en": "Real Estate Legal Issues",
+          "zh": "房产法律问题",
+          "is_used": false
+        },
+        {
+          "en": "Legal Document Writing",
+          "zh": "法律文书写作",
+          "is_used": false
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "name": "Agriculture and Gardening",
+      "name_zh": "农业园艺",
+      "subDirections": [
+        {
+          "en": "Planting Technology Guide",
+          "zh": "种植技术指导",
+          "is_used": true
+        },
+        {
+          "en": "Garden Design Methods",
+          "zh": "园艺设计方法",
+          "is_used": false
+        },
+        {
+          "en": "Pest and Disease Control",
+          "zh": "病虫害防治",
+          "is_used": false
+        },
+        {
+          "en": "Organic Agriculture Knowledge",
+          "zh": "有机农业知识",
+          "is_used": false
+        },
+        {
+          "en": "Flower Care Techniques",
+          "zh": "花卉养护技巧",
+          "is_used": false
+        },
+        {
+          "en": "Agricultural Policy Interpretation",
+          "zh": "农业政策解读",
+          "is_used": false
+        },
+        {
+          "en": "Agricultural Product Marketing",
+          "zh": "农产品营销",
+          "is_used": false
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "name": "H5 Games and Entertainment",
+      "name_zh": "H5游戏娱乐",
+      "subDirections": [
+        {
+          "en": "Game Strategy Guides",
+          "zh": "游戏攻略指南",
+          "is_used": true
+        },
+        {
+          "en": "Game Reviews and Recommendations",
+          "zh": "游戏评测推荐",
+          "is_used": true
+        },
+        {
+          "en": "H5 Game Development Technology",
+          "zh": "H5游戏开发技术",
+          "is_used": false
+        },
+        {
+          "en": "Game Trend Analysis",
+          "zh": "游戏趋势分析",
+          "is_used": false
+        },
+        {
+          "en": "Gaming Community Interaction",
+          "zh": "游戏社区互动",
+          "is_used": false
+        },
+        {
+          "en": "Game Monetization Models",
+          "zh": "游戏变现模式",
+          "is_used": false
+        },
+        {
+          "en": "Gaming Platform Comparison",
+          "zh": "游戏平台比较",
+          "is_used": false
+        },
+        {
+          "en": "Mobile Game User Experience",
+          "zh": "手机游戏用户体验",
+          "is_used": false
+        },
+        {
+          "en": "Game Marketing Strategies",
+          "zh": "游戏营销策略",
+          "is_used": false
+        },
+        {
+          "en": "Casual Game Design Principles",
+          "zh": "休闲游戏设计原理",
+          "is_used": false
+        }
+      ]
+    }
+  ],
+  "contentCharacteristics": [
+    {
+      "en": "Stable and Continuous User Demand",
+      "zh": "用户需求持续且稳定"
+    },
+    {
+      "en": "High Search Volume",
+      "zh": "搜索量大"
+    },
+    {
+      "en": "Rich Long-tail Keywords",
+      "zh": "长尾关键词丰富"
+    },
+    {
+      "en": "Large Content Update Space",
+      "zh": "内容更新空间大"
+    },
+    {
+      "en": "Easy to Generate Series Content",
+      "zh": "容易产生系列内容"
+    },
+    {
+      "en": "Strong User Interaction",
+      "zh": "用户互动性强"
+    },
+    {
+      "en": "High Monetization Potential",
+      "zh": "变现可能性高"
+    }
+  ],
+  "selectionConsiderations": [
+    {
+      "en": "Target Audience Precision",
+      "zh": "目标受众的精准度"
+    },
+    {
+      "en": "Content Creation Sustainability",
+      "zh": "内容创作的可持续性"
+    },
+    {
+      "en": "Competition Level Assessment",
+      "zh": "竞争程度的评估"
+    },
+    {
+      "en": "Monetization Model Feasibility",
+      "zh": "变现模式的可行性"
+    },
+    {
+      "en": "Content Update Frequency Requirements",
+      "zh": "内容更新的频率要求"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+name: Update Articles
+
+on:
+                
+    schedule:
+    - cron: '30 7 */4 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  update-articles:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.12.2'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Create and switch to new branch
+        run: |
+          BRANCH_NAME="update-title-and-articles-$(date +'%Y%m%d-%H%M%S')-$(head /dev/urandom | tr -dc a-z0-9 | head -c6)"
+          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+          git checkout -b $BRANCH_NAME
+
+      - name: Run update script with retry and custom exit code
+        env:
+          API_BASE_URL: ${{ vars.API_BASE_URL }}
+          API_KEY: ${{ secrets.API_KEY }}
+        run: |
+          n=0
+          while [ "$n" -lt 3 ]
+          do
+            node scripts/update-title-and-article.cjs
+            code=$?
+            if [ "$code" -eq 0 ]; then
+              echo "Success!"
+              break
+            elif [ "$code" -eq 99 ]; then
+              echo "Title generation failed with code 99, will retry after 1 minute."
+              n=$((n+1))
+              sleep 60
+            else
+              echo "Script failed with code $code, not retrying."
+              exit $code
+            fi
+          done
+          if [ "$n" -ge 3 ]; then
+            echo "All attempts failed with code 99."
+            exit 99
+          fi
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'github-actions@github.com'
+
+      - name: Add and commit changes
+        run: |
+          git add content/
+          git diff --cached
+          git diff --quiet && git diff --staged --quiet || git commit -m "$BRANCH_NAME"
+
+      - name: Push branch to remote
+        run: |
+          git push origin $BRANCH_NAME
+
+      - name: Create and merge PR via API
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = await github.rest.pulls.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `chore: update articles and categories - ${process.env.BRANCH_NAME}`,
+              head: process.env.BRANCH_NAME,
+              base: 'main',
+              body: 'Automated update of articles and categories',
+            });
+            await github.rest.pulls.merge({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pr.data.number,
+              merge_method: 'squash',
+            });
+            await github.rest.git.deleteRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: `heads/${process.env.BRANCH_NAME}`,
+            });
+
+      - name: Notify on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const run_id = context.runId;
+            const run_url = `https://github.com/${owner}/${repo}/actions/runs/${run_id}`;
+            
+            await github.rest.issues.create({
+              owner,
+              repo,
+              title: 'Article update workflow failed',
+              body: `The article update workflow failed. Please check the [workflow run](${run_url}) for details.`
+            }); 

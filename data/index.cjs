@@ -1,0 +1,80 @@
+const siteDomain = "https://upalg.com"
+
+const siteSEOInfo = {
+  title: "Professional Game Reviews & Gaming Recommendations",
+  description: "Discover expert game reviews and comprehensive gaming recommendations for mobile games, H5 games, and online games. Get honest ratings, detailed analysis, and trusted game suggestions.",
+  keywords: "game reviews, gaming recommendations, mobile game reviews, H5 game ratings, online game analysis, game evaluation, gaming guides, game ratings"
+}
+
+const categories = [
+  {
+    id: "1",
+    slug: "mobile-game-reviews",
+    title: "Comprehensive Mobile Game Reviews",
+    description: "Expert mobile game reviews with detailed analysis, ratings, and recommendations. Discover the best smartphone games with our professional evaluation and honest gaming insights.",
+    longTailTitleArr: [],
+    image_prompt: "Professional mobile game review interface showing smartphone with game screenshots, rating stars, review scores, and evaluation criteria displayed on clean modern background"
+  },
+  {
+    id: "2",
+    slug: "h5-game-recommendations",
+    title: "H5 Game Recommendations & Analysis",
+    description: "Curated H5 game recommendations with expert analysis and performance reviews. Find the best HTML5 browser games with our comprehensive evaluation and rating system.",
+    longTailTitleArr: [],
+    image_prompt: "Browser interface displaying H5 game collection with recommendation badges, rating systems, game preview thumbnails, and expert review highlights"
+  },
+  {
+    id: "3",
+    slug: "online-game-evaluations",
+    title: "Online Game Evaluations & Ratings",
+    description: "Professional online game evaluations with detailed ratings and performance analysis. Get trusted insights on multiplayer games, MMOs, and web-based gaming experiences.",
+    longTailTitleArr: [],
+    image_prompt: "Online gaming evaluation dashboard with multiple game windows, rating charts, performance metrics, and comparison tables in professional review layout"
+  },
+  {
+    id: "4",
+    slug: "indie-game-discoveries",
+    title: "Indie Game Discoveries & Hidden Gems",
+    description: "Discover amazing indie games and hidden gaming gems with our expert recommendations. Explore unique gameplay experiences and innovative indie game reviews.",
+    longTailTitleArr: [],
+    image_prompt: "Artistic showcase of indie games with creative game art, unique visual styles, discovery badges, and spotlight effects highlighting innovative gaming experiences"
+  },
+  {
+    id: "5",
+    slug: "game-comparison-guides",
+    title: "Game Comparison & Selection Guides",
+    description: "Detailed game comparison guides helping you choose the perfect games. Compare features, gameplay, graphics, and user experience with our professional analysis.",
+    longTailTitleArr: [],
+    image_prompt: "Side-by-side game comparison interface with feature charts, pros and cons lists, rating comparisons, and selection criteria displayed professionally"
+  },
+  {
+    id: "6",
+    slug: "new-game-releases",
+    title: "New Game Release Reviews & First Impressions",
+    description: "Stay updated with new game release reviews and first impression analysis. Get early insights on latest games with our timely reviews and recommendation updates.",
+    longTailTitleArr: [],
+    image_prompt: "Fresh game release showcase with new game logos, first impression ratings, release calendars, and early review highlights in modern gaming layout"
+  },
+  {
+    id: "7",
+    slug: "gaming-platform-reviews",
+    title: "Gaming Platform Reviews & Comparisons",
+    description: "Comprehensive gaming platform reviews comparing features, game libraries, and user experience. Choose the best gaming platforms with our detailed analysis.",
+    longTailTitleArr: [],
+    image_prompt: "Gaming platform comparison showing multiple platform logos, feature comparison charts, user interface previews, and platform rating displays"
+  },
+  {
+    id: "8",
+    slug: "retro-game-reviews",
+    title: "Retro Game Reviews & Classic Recommendations",
+    description: "Nostalgic retro game reviews and classic gaming recommendations. Rediscover timeless games with our expert analysis of gaming history and vintage game evaluations.",
+    longTailTitleArr: [],
+    image_prompt: "Retro gaming setup with classic game screenshots, vintage gaming elements, nostalgic color schemes, and timeless game collection displays"
+  }
+]
+
+module.exports = {
+  siteDomain,
+  siteSEOInfo,
+  categories
+}

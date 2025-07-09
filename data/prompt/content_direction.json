@@ -834,7 +834,7 @@
         {
           "en": "H5 Game Development Technology",
           "zh": "H5游戏开发技术",
-          "is_used": false
+          "is_used": true
         },
         {
           "en": "Game Trend Analysis",

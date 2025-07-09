@@ -1,5 +1,5 @@
 0. 更新概述:
-  - 从[data/content_direction.json]中[id]为[number用户提供]的数据中获取第一个为false的关键词,当作本指令的关键词.然后更新其值为'true'
+  - 从[data/content_direction.json]中[id]为[询问用户所提供id]的数据中获取第一个为false的关键词,当作本指令的关键词.然后更新其值为'true'
   - 根据当前指令来重写文件[data/index.cjs]
   - 重写完成以后,在data文件夹下执行: [node update-json-and-rename-img.cjs]文件
 1. 关键词来源规则：

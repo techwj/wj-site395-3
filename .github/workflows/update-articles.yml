@@ -2,7 +2,7 @@ name: Update Articles
 
 on:
   schedule:
-    - cron: '30 5 */30 * *'
+    - cron: '30 5 */28 * *'
   workflow_dispatch:
 
 permissions:

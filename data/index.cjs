@@ -1,75 +1,75 @@
-const siteDomain = "https://upalg.com"
+const siteDomain = "https://92game.vip"
 
 const siteSEOInfo = {
-  title: "Professional Game Reviews & Gaming Recommendations",
-  description: "Discover expert game reviews and comprehensive gaming recommendations for mobile games, H5 games, and online games. Get honest ratings, detailed analysis, and trusted game suggestions.",
-  keywords: "game reviews, gaming recommendations, mobile game reviews, H5 game ratings, online game analysis, game evaluation, gaming guides, game ratings"
+  title: "Professional H5 Game Development Technology Guide",
+  description: "Master H5 game development with expert tutorials, frameworks, and best practices. Learn HTML5 game creation, mobile optimization, and cross-platform development techniques.",
+  keywords: "H5 game development, HTML5 games, game development technology, mobile game development, cross-platform games, game frameworks, game optimization, web games"
 }
 
 const categories = [
   {
-    id: "1",
-    slug: "mobile-game-reviews",
-    title: "Comprehensive Mobile Game Reviews",
-    description: "Expert mobile game reviews with detailed analysis, ratings, and recommendations. Discover the best smartphone games with our professional evaluation and honest gaming insights.",
-    longTailTitleArr: [],
-    image_prompt: "Professional mobile game review interface showing smartphone with game screenshots, rating stars, review scores, and evaluation criteria displayed on clean modern background"
+    "id": "1",
+    "slug": "h5-game-development-basics",
+    "title": "H5 Game Development Fundamentals",
+    "description": "Learn the essential principles of H5 game development. Master HTML5 canvas, WebGL, and JavaScript game programming for creating engaging cross-platform games.",
+    "longTailTitleArr": [],
+    "image_prompt": "A professional workspace showing H5 game development with code editor, HTML5 canvas elements, and mobile devices displaying game interfaces"
   },
   {
-    id: "2",
-    slug: "h5-game-recommendations",
-    title: "H5 Game Recommendations & Analysis",
-    description: "Curated H5 game recommendations with expert analysis and performance reviews. Find the best HTML5 browser games with our comprehensive evaluation and rating system.",
-    longTailTitleArr: [],
-    image_prompt: "Browser interface displaying H5 game collection with recommendation badges, rating systems, game preview thumbnails, and expert review highlights"
+    "id": "2",
+    "slug": "html5-game-frameworks",
+    "title": "HTML5 Game Framework Guide",
+    "description": "Explore popular HTML5 game frameworks like Phaser, Three.js, and Babylon.js. Compare features, performance, and choose the best framework for your game project.",
+    "longTailTitleArr": [],
+    "image_prompt": "Multiple game framework logos displayed on screen with code examples and framework comparison charts"
   },
   {
-    id: "3",
-    slug: "online-game-evaluations",
-    title: "Online Game Evaluations & Ratings",
-    description: "Professional online game evaluations with detailed ratings and performance analysis. Get trusted insights on multiplayer games, MMOs, and web-based gaming experiences.",
-    longTailTitleArr: [],
-    image_prompt: "Online gaming evaluation dashboard with multiple game windows, rating charts, performance metrics, and comparison tables in professional review layout"
+    "id": "3",
+    "slug": "mobile-game-optimization",
+    "title": "Mobile Game Optimization Techniques",
+    "description": "Optimize H5 games for mobile devices with performance tuning, touch controls, and responsive design. Ensure smooth gameplay across all mobile platforms.",
+    "longTailTitleArr": [],
+    "image_prompt": "Mobile devices showing optimized H5 games with performance metrics, touch interface elements, and responsive design indicators"
   },
   {
-    id: "4",
-    slug: "indie-game-discoveries",
-    title: "Indie Game Discoveries & Hidden Gems",
-    description: "Discover amazing indie games and hidden gaming gems with our expert recommendations. Explore unique gameplay experiences and innovative indie game reviews.",
-    longTailTitleArr: [],
-    image_prompt: "Artistic showcase of indie games with creative game art, unique visual styles, discovery badges, and spotlight effects highlighting innovative gaming experiences"
+    "id": "4",
+    "slug": "cross-platform-game-development",
+    "title": "Cross-Platform Game Development",
+    "description": "Create games that work seamlessly across web, mobile, and desktop platforms. Learn platform-specific optimizations and universal game design principles.",
+    "longTailTitleArr": [],
+    "image_prompt": "Multiple devices (desktop, tablet, phone) displaying the same H5 game with cross-platform compatibility indicators"
   },
   {
-    id: "5",
-    slug: "game-comparison-guides",
-    title: "Game Comparison & Selection Guides",
-    description: "Detailed game comparison guides helping you choose the perfect games. Compare features, gameplay, graphics, and user experience with our professional analysis.",
-    longTailTitleArr: [],
-    image_prompt: "Side-by-side game comparison interface with feature charts, pros and cons lists, rating comparisons, and selection criteria displayed professionally"
+    "id": "5",
+    "slug": "game-assets-and-graphics",
+    "title": "Game Assets and Graphics Design",
+    "description": "Master game asset creation, sprite animation, and graphics optimization for H5 games. Learn efficient asset management and visual design techniques.",
+    "longTailTitleArr": [],
+    "image_prompt": "Game development workspace with sprite sheets, graphic design tools, and optimized game assets displayed on screen"
   },
   {
-    id: "6",
-    slug: "new-game-releases",
-    title: "New Game Release Reviews & First Impressions",
-    description: "Stay updated with new game release reviews and first impression analysis. Get early insights on latest games with our timely reviews and recommendation updates.",
-    longTailTitleArr: [],
-    image_prompt: "Fresh game release showcase with new game logos, first impression ratings, release calendars, and early review highlights in modern gaming layout"
+    "id": "6",
+    "slug": "game-audio-and-sound-effects",
+    "title": "Game Audio and Sound Effects",
+    "description": "Implement immersive audio experiences in H5 games. Learn Web Audio API, sound optimization, and creating engaging sound effects and background music.",
+    "longTailTitleArr": [],
+    "image_prompt": "Audio mixing interface with sound waveforms, game audio controls, and sound effect libraries for H5 game development"
   },
   {
-    id: "7",
-    slug: "gaming-platform-reviews",
-    title: "Gaming Platform Reviews & Comparisons",
-    description: "Comprehensive gaming platform reviews comparing features, game libraries, and user experience. Choose the best gaming platforms with our detailed analysis.",
-    longTailTitleArr: [],
-    image_prompt: "Gaming platform comparison showing multiple platform logos, feature comparison charts, user interface previews, and platform rating displays"
+    "id": "7",
+    "slug": "game-performance-optimization",
+    "title": "Game Performance Optimization",
+    "description": "Optimize H5 game performance with advanced techniques. Learn memory management, rendering optimization, and achieving 60fps gameplay across devices.",
+    "longTailTitleArr": [],
+    "image_prompt": "Performance monitoring dashboard showing FPS metrics, memory usage, and optimization tools for H5 game development"
   },
   {
-    id: "8",
-    slug: "retro-game-reviews",
-    title: "Retro Game Reviews & Classic Recommendations",
-    description: "Nostalgic retro game reviews and classic gaming recommendations. Rediscover timeless games with our expert analysis of gaming history and vintage game evaluations.",
-    longTailTitleArr: [],
-    image_prompt: "Retro gaming setup with classic game screenshots, vintage gaming elements, nostalgic color schemes, and timeless game collection displays"
+    "id": "8",
+    "slug": "game-monetization-strategies",
+    "title": "H5 Game Monetization Strategies",
+    "description": "Implement effective monetization strategies for H5 games. Learn in-app purchases, advertising integration, and revenue optimization techniques.",
+    "longTailTitleArr": [],
+    "image_prompt": "Monetization dashboard showing revenue metrics, ad integration examples, and in-app purchase interfaces for H5 games"
   }
 ]
 

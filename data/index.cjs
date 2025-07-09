@@ -1,4 +1,4 @@
-const siteDomain = "https://92game.vip"
+const siteDomain = "https://h5dev.game92.vip"
 
 const siteSEOInfo = {
   title: "Professional H5 Game Development Technology Guide",

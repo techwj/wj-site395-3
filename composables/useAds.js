@@ -15,10 +15,53 @@ export const useAds = () => {
     if (isScriptLoaded.value || isScriptLoading.value) return
     isScriptLoading.value = true
     return new Promise((resolve) => {
-      if (document.querySelector('script[src*="gpt.js"]')) {
-        isScriptLoaded.value = true
-        isScriptLoading.value = false
-        resolve()
+      const existingScript = document.querySelector('script[src*="gpt.js"]')
+      if (existingScript) {
+        // Script tag exists, but we need to ensure proper initialization
+        console.log('gpt script exists, checking initialization status');
+        
+        const initializeGoogleTag = () => {
+          window.googletag = window.googletag || {cmd: []}
+          window.gptAdSlots = window.gptAdSlots || []
+          
+          window.googletag.cmd.push(() => {
+            // Configure privacy settings
+            window.googletag.pubads().setPrivacySettings({
+              restrictDataProcessing: true,
+              childDirectedTreatment: false,
+              underAgeOfConsent: false,
+              nonPersonalizedAds: true
+            })
+            // Set page URL and background color
+            window.googletag.pubads().set('page_url', window.location.href)
+            window.googletag.pubads().set('adsense_background_color', 'ffffff')
+            // Enable services (only once)
+            if (!isServiceEnabled.value) {
+              window.googletag.pubads().enableSingleRequest()
+              window.googletag.enableServices()
+              isServiceEnabled.value = true
+            }
+            
+            isScriptLoaded.value = true
+            isScriptLoading.value = false
+            console.log('gpt script configured and services enabled');
+            resolve()
+          })
+        }
+        
+        if (window.googletag && window.googletag.cmd) {
+          // Script loaded, initialize immediately
+          initializeGoogleTag()
+        } else {
+          // Script still loading, wait for it
+          existingScript.onload = initializeGoogleTag
+          // Also try with a small delay in case onload already fired
+          setTimeout(() => {
+            if (window.googletag && window.googletag.cmd && !isScriptLoaded.value) {
+              initializeGoogleTag()
+            }
+          }, 100)
+        }
         return
       }
       const script = document.createElement('script')
@@ -50,8 +93,10 @@ export const useAds = () => {
           }
         })
         resolve()
+        console.log('gpt script loaded');
       }
       document.head.appendChild(script)
+      console.log('gpt script appended');
     })
   }
 
@@ -125,6 +170,8 @@ export const useAds = () => {
             window.googletag.display(adId);
             initializedSlots.add(adId);
             resolve();
+            console.log('gpt ad initialized');
+            
           } catch (error) {
             console.error('Error initializing ad:', error);
             resolve();
@@ -178,4 +225,4 @@ export const useAds = () => {
     loadAdScript,     // load AdSense script
     initAdScript      // init AdSense ad
   }
-} 
+}

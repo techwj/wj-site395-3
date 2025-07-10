@@ -9,9 +9,10 @@
         :key="`${adConfig.slot}-${route.fullPath}`"
         ref="adInsRef"
         class="adsbygoogle"
-        :style="`display:inline-block;width:${adConfig.width}px;height:${adConfig.height}px`"
+        :style="adConfig.format === 'auto' ? 'display:block' : `display:inline-block;width:${adConfig.width}px;height:${adConfig.height}px`"
         :data-ad-client="adConfig.client"
         :data-ad-slot="adConfig.slot"
+        v-bind="adConfig.format === 'auto' ? { 'data-ad-format': 'auto', 'data-full-width-responsive': adConfig.fullWidthResponsive ? 'true' : undefined } : {}"
       ></ins>
     </div>
   </ClientOnly>
@@ -49,6 +50,14 @@
     { min: 0, client: 'ca-pub-6642330019857482', slot: '9434881128', width: 320, height: 150 }      // mobile
   ]"
 />
+
+// auto format
+// <AdUnit
+//   type="adsense"
+//   :configs="[
+//     { min: 0, client: 'ca-pub-6642330019857482', slot: '2640637409', format: 'auto', fullWidthResponsive: true }
+//   ]"
+// />
  * 
  * 
  * 
@@ -82,10 +91,24 @@ const props = defineProps({
   configs: {
     type: Array,
     default: () => [
+      // fixed size ads
       { min: 1000, client: 'ca-pub-6642330019857482', slot: '6508323125', width: 1080, height: 250 },
       { min: 500, client: 'ca-pub-6642330019857482', slot: '6508323125', width: 400, height: 150 },
-      { min: 0, client: 'ca-pub-6642330019857482', slot: '6508323125', width: 320, height: 150 }
+      { min: 0, client: 'ca-pub-6642330019857482', slot: '6508323125', width: 320, height: 150 },
+      // auto format ads
+      // { min: 0, client: 'ca-pub-6642330019857482', slot: '2640637409', format: 'auto', fullWidthResponsive: true }
     ]
+    /*
+      configs: Array<{
+        min: number, // screen width min
+        client: string, // adsense client id
+        slot: string,   // adsense slot id
+        width?: number, // fixed width (optional)
+        height?: number, // fixed height (optional)
+        format?: string, // ads format, like 'auto' (optional, auto format ads)
+        fullWidthResponsive?: boolean // full width responsive (optional, with format:'auto')
+      }>
+    */
   }
 })
 
@@ -116,17 +139,17 @@ function removeOtherAds(currentIns) {
   });
 }
 
-// 清理广告函数
+// cleanup ads
 function cleanupAd() {
   const currentIns = adInsRef.value;
   if (currentIns) {
-    // 移除广告状态
+    // remove ad status
     if (currentIns.hasAttribute('data-adsbygoogle-status') ||
         currentIns.hasAttribute('data-ad-status') ||
         currentIns.innerHTML.trim() !== '') {
       currentIns.removeAttribute('data-adsbygoogle-status');
       currentIns.removeAttribute('data-ad-status');
-      // 清空内容
+      // clear content
       currentIns.innerHTML = '';
       console.log('adunit>cleanup>ad removed', {
         slot: adConfig.value?.slot,
@@ -134,7 +157,7 @@ function cleanupAd() {
       });
     }
   }
-  // 重置状态
+  // reset status
   isScriptLoaded.value = false;
   isAdInitialized.value = false;
   scriptLoadRetryCount.value = 0;
@@ -144,7 +167,7 @@ async function initAd() {
   const currentPath = route.fullPath;
   const currentIns = adInsRef.value;
 
-  // 先检查元素是否存在
+  // check if element exists
   if (!currentIns) {
     console.log('adunit>initad>waiting for ins element');
     await nextTick();
@@ -163,7 +186,7 @@ async function initAd() {
     path: currentPath
   });
 
-  // 检查是否已经有广告
+  // check if ad already exists
   const hasAd = currentIns.hasAttribute('data-adsbygoogle-status') || 
                 currentIns.hasAttribute('data-ad-status') ||
                 currentIns.innerHTML.trim() !== '';
@@ -176,7 +199,7 @@ async function initAd() {
     return;
   }
 
-  // 等待脚本加载完成
+  // wait for script loaded
   if (!window.adsbygoogle) {
     while (scriptLoadRetryCount.value < maxRetries) {
       if (!isScriptLoaded.value && !isScriptLoading.value) {
@@ -219,7 +242,7 @@ async function initAd() {
   });
   
   try {
-    // 确保 adsbygoogle 数组存在并推送新广告
+    // ensure adsbygoogle array exists and push new ad
     window.adsbygoogle = window.adsbygoogle || [];
     window.adsbygoogle.push({});
     isAdInitialized.value = true;
@@ -234,7 +257,7 @@ async function initAd() {
   }
 }
 
-// 监听路由变化
+// watch route change
 watch(() => route.fullPath, async (newPath, oldPath) => {
   if (props.type === 'adsense') {
     console.log('adunit>route changed', { 
@@ -260,7 +283,7 @@ onMounted(async () => {
   }
 });
 
-// 在组件即将更新前清理
+// cleanup before update
 onBeforeUpdate(() => {
   if (props.type === 'adsense') {
     console.log('adunit>before update');
@@ -268,7 +291,7 @@ onBeforeUpdate(() => {
   }
 });
 
-// 在组件即将卸载前清理
+// cleanup before unmount
 onBeforeUnmount(() => {
   if (props.type === 'gpt') {
     destroyGPTAd(props.gptAdId);

@@ -1,6 +1,6 @@
 <template>
   <ClientOnly>
-    <div>
+    <div class="w-full h-full">
       <!-- GPT ads -->
       <div v-if="type === 'gpt'" :id="gptAdId" :style="gptStyle"></div>
       <!-- AdSense ads -->
@@ -260,6 +260,22 @@ async function initAd() {
 // watch route change
 watch(() => route.fullPath, async (newPath, oldPath) => {
   if (props.type === 'adsense') {
+    // ignore Google AdSense vignette hash changes
+    const isGoogleVignetteChange = (
+      newPath.includes('#google_vignette') || 
+      oldPath.includes('#google_vignette')
+    ) && (
+      newPath.replace('#google_vignette', '') === oldPath.replace('#google_vignette', '')
+    );
+    
+    if (isGoogleVignetteChange) {
+      console.log('adunit>route changed>ignored google vignette', { 
+        from: oldPath,
+        to: newPath
+      });
+      return;
+    }
+    
     console.log('adunit>route changed', { 
       from: oldPath,
       to: newPath,

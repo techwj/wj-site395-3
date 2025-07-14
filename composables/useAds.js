@@ -153,7 +153,7 @@ export const useAds = () => {
           const slot = window.googletag.defineOutOfPageSlot(adSlot, window.googletag.enums.OutOfPageFormat.INTERSTITIAL)
             .addService(window.googletag.pubads());
           window.gptAdSlots.push(slot);
-          window.googletag.display(adId);
+          window.googletag.display(); // 不传div id，插屏广告只允许一个
         } catch (error) {
           console.error('Error initializing interstitial ad:', error);
         } finally {

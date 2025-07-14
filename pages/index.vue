@@ -14,24 +14,13 @@
         </h1>
       </div>
     </div>
-    <!-- google ads interstitial mobile -->
-    <div class="block md:hidden">
-      <AdUnit
-        type="gpt"
-        :isInterstitial="true"
-        gptAdId="HK_CN_game92_vip_interstitial_1"
-        gptSlot="/29746187,23103910451/HK_CN_game92.vip_interstitial_1"
-      />
-    </div>
-    <!-- google ads interstitial pc -->
-    <div class="hidden md:block">
-      <AdUnit
-        type="gpt"
-        :isInterstitial="true"
-        gptAdId="HK_CN_game92_vip_interstitial_2"
-        gptSlot="/29746187,23103910451/HK_CN_game92.vip_interstitial_2"
-      />
-    </div>
+    <!-- google ads interstitial -->
+    <AdUnit
+      type="gpt"
+      :isInterstitial="true"
+      :gptAdId="interstitialAdId"
+      :gptSlot="interstitialSlot"
+    />
     <!-- google ads mobile-->
     <div class="w-full h-[250px] bg-gray-100 block md:hidden">
       <AdUnit
@@ -186,6 +175,15 @@ function getSeoDescription(article) {
   if (article.description) return article.description
   return `Read expert tips about ${article.title} in the ${article.category} category.`
 }
+
+// is mobile
+const isMobile = ref(false)
+onMounted(() => {
+  isMobile.value = window.innerWidth < 768
+})
+// interstitial ad parameters
+const interstitialAdId = computed(() => isMobile.value ? 'HK_CN_game92_vip_interstitial_1' : 'HK_CN_game92_vip_interstitial_2')
+const interstitialSlot = computed(() => isMobile.value ? '/29746187,23103910451/HK_CN_game92.vip_interstitial_1' : '/29746187,23103910451/HK_CN_game92.vip_interstitial_2')
 </script>
 
 <style scoped>

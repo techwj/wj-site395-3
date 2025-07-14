@@ -1,10 +1,10 @@
 <template>
     <!-- Banner -->
-    <div class="relative w-full overflow-hidden mb-8" style="height: 400px;">
+    <div class="relative w-full h-[200px] overflow-hidden mb-8">
       <img
         src="/images/common/default.webp"
         alt="Banner"
-        class="absolute inset-0 w-full h-full object-cover"
+        class="absolute inset-0 w-full  object-cover"
         @error="onBannerImgError"
       />
       <div class="absolute inset-0 bg-blue-900/30"></div>
@@ -13,6 +13,53 @@
           {{ config.head?.title || 'Welcome to Our Blog' }}
         </h1>
       </div>
+    </div>
+    <!-- google ads interstitial mobile -->
+    <div class="block md:hidden">
+      <AdUnit
+        type="gpt"
+        :isInterstitial="true"
+        gptAdId="HK_CN_game92_vip_interstitial_1"
+        gptSlot="/29746187,23103910451/HK_CN_game92.vip_interstitial_1"
+      />
+    </div>
+    <!-- google ads interstitial pc -->
+    <div class="hidden md:block">
+      <AdUnit
+        type="gpt"
+        :isInterstitial="true"
+        gptAdId="HK_CN_game92_vip_interstitial_2"
+        gptSlot="/29746187,23103910451/HK_CN_game92.vip_interstitial_2"
+      />
+    </div>
+    <!-- google ads mobile-->
+    <div class="w-full h-[250px] bg-gray-100 block md:hidden">
+      <AdUnit
+        type="gpt"
+        gptAdId="HK_CN_game92_vip_banner_1"
+        gptSlot="/29746187,23103910451/HK_CN_game92.vip_banner_1"
+        :gptSlotSizes="[[300,250]]"
+        :gptSizeMappings="[
+          { viewport: [728, 300], sizes: [] },
+          { viewport: [0, 0], sizes: [[300,250]] }
+        ]"
+        gptStyle="text-align:center;"
+      />
+    </div>
+
+    <!-- google ads pc-->
+    <div class="w-full h-[100px] bg-gray-100 hidden md:block">
+      <AdUnit
+        type="gpt"
+        gptAdId="HK_CN_game92_vip_banner_7"
+        gptSlot="/29746187,23103910451/HK_CN_game92.vip_banner_7"
+        :gptSlotSizes="[[728, 90]]"
+        :gptSizeMappings="[
+          { viewport: [728, 300], sizes: [728, 90] },
+          { viewport: [0, 0], sizes: [] }
+        ]"
+        gptStyle="text-align:center;"
+      />
     </div>
 
     <!-- Categories -->

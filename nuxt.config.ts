@@ -89,7 +89,7 @@ export default defineNuxtConfig({
     head: {
       script: [
         {
-          src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6642330019857482",
+          src: "https://securepubads.g.doubleclick.net/tag/js/gpt.js",
           async: true,
           crossorigin: "anonymous"
         }

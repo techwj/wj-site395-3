@@ -33,6 +33,36 @@
       </h2>
     </div>
 
+    <!-- google ads mobile-->
+    <div class="w-full h-[250px] bg-gray-100 block md:hidden">
+      <AdUnit
+        type="gpt"
+        gptAdId="HK_CN_game92_vip_banner_3"
+        gptSlot="/29746187,23103910451/HK_CN_game92.vip_banner_3"
+        :gptSlotSizes="[[300,250]]"
+        :gptSizeMappings="[
+          { viewport: [728, 300], sizes: [] },
+          { viewport: [0, 0], sizes: [[300,250]] }
+        ]"
+        gptStyle="text-align:center;"
+      />
+    </div>
+
+    <!-- google ads pc-->
+    <div class="w-full h-[100px] bg-gray-100 hidden md:block">
+      <AdUnit
+        type="gpt"
+        gptAdId="HK_CN_game92_vip_banner_9"
+        gptSlot="/29746187,23103910451/HK_CN_game92.vip_banner_9"
+        :gptSlotSizes="[[728, 90]]"
+        :gptSizeMappings="[
+          { viewport: [728, 300], sizes: [728, 90] },
+          { viewport: [0, 0], sizes: [] }
+        ]"
+        gptStyle="text-align:center;"
+      />
+    </div>
+
     <div v-if="articles && articles.length > 0">
       <div class="flex flex-col gap-4">
         <template v-for="(article, index) in articles" :key="article._path">

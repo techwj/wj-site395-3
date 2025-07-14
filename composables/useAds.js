@@ -139,6 +139,30 @@ export const useAds = () => {
     });
   }
 
+  // 插屏广告初始化
+  const initGPTInterstitialAd = (adId, adSlot) => {
+    return new Promise((resolve) => {
+      if (!window.googletag) {
+        window.googletag = {cmd: []}
+      }
+      if (!window.gptAdSlots) {
+        window.gptAdSlots = []
+      }
+      window.googletag.cmd.push(() => {
+        try {
+          const slot = window.googletag.defineOutOfPageSlot(adSlot, window.googletag.enums.OutOfPageFormat.INTERSTITIAL)
+            .addService(window.googletag.pubads());
+          window.gptAdSlots.push(slot);
+          window.googletag.display(adId);
+        } catch (error) {
+          console.error('Error initializing interstitial ad:', error);
+        } finally {
+          resolve();
+        }
+      });
+    });
+  };
+
   // AdSense script loader
   const loadAdScript = (client = '') => {
     if (isAdsenseScriptLoaded.value || isAdsenseScriptLoading.value) return
@@ -176,6 +200,7 @@ export const useAds = () => {
     initGPTAd,        // init GPT ad
     destroyGPTAd,     // destroy GPT ad
     loadAdScript,     // load AdSense script
-    initAdScript      // init AdSense ad
+    initAdScript,     // init AdSense ad
+    initGPTInterstitialAd // init GPT interstitial ad
   }
 } 

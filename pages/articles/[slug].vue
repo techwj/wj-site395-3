@@ -1,30 +1,6 @@
 <template>
   <ClientOnly>
     <div class="mb-1">
-      <!-- Google AdSense -->
-    <!-- <div style="width: 320px; height: 200px;">
-      <AdUnit
-        :key="$route.fullPath"
-        type="adsense"
-        :configs="[
-          { min: 0, client: 'ca-pub-6642330019857482', slot: '6508323125', width: 320, height: 200 }
-        ]"
-      />
-    </div> -->
-
-
-    <!-- <Adunit
-      :key="$route.fullPath"
-      type="gpt"
-      gptSlot="/29746187,23103910451/HK_CN_58information.vip_banner_5"
-      gptAdId="HK_CN_58information_vip_banner_5"
-      :gptSlotSizes="[[300,250]]"
-      :gptSizeMappings="[
-        { viewport: [728, 300], sizes: [] },
-        { viewport: [0, 0], sizes: [[300,250]] }
-      ]"
-      gptStyle="text-align:center;min-width:300px;height:250px"
-    ></Adunit> -->
     </div>
   </ClientOnly>
   <div @click.capture="toParentCategory" class="container mx-auto px-2 py-2">
@@ -42,14 +18,43 @@
           {{ article.category }}
         </NuxtLink>
       </div>
-      <img
+      <!-- <img
         :key="articleImgSrc"
         :src="articleImgSrc"
         :alt="article.imageAlt || article.title"
         class="w-full h-64 object-cover rounded-lg mb-2"
         @error="onImgError"
         loading="lazy"
+      /> -->
+    <!-- google ads mobile-->
+    <div class="w-full h-[250px] bg-gray-100 block md:hidden">
+      <AdUnit
+        type="gpt"
+        gptAdId="HK_CN_game92_vip_banner_4"
+        gptSlot="/29746187,23103910451/HK_CN_game92.vip_banner_4"
+        :gptSlotSizes="[[300,50]]"
+        :gptSizeMappings="[
+          { viewport: [728, 300], sizes: [] },
+          { viewport: [0, 0], sizes: [[300,50]] }
+        ]"
+        gptStyle="text-align:center;"
       />
+    </div>
+
+    <!-- google ads pc-->
+    <div class="w-full h-[100px] bg-gray-100 hidden md:block">
+      <AdUnit
+        type="gpt"
+        gptAdId="HK_CN_game92_vip_banner_10"
+        gptSlot="/29746187,23103910451/HK_CN_game92.vip_banner_10"
+        :gptSlotSizes="[[970, 90]]"
+        :gptSizeMappings="[
+          { viewport: [728, 300], sizes: [970, 90] },
+          { viewport: [0, 0], sizes: [] }
+        ]"
+        gptStyle="text-align:center;"
+      />
+    </div>
       <div class="prose max-w-none">
         <div v-if="renderedContentFirstHalf" v-html="renderedContentFirstHalf"></div>
 

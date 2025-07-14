@@ -64,6 +64,14 @@
  * 
  * 
  * 
+ * // 插屏广告用法
+ * <AdUnit
+ *   type="gpt"
+ *   :isInterstitial="true"
+ *   gptAdId="HK_CN_game92_vip_interstitial_1"
+ *   gptSlot="/29746187,23103910451/HK_CN_game92.vip_interstitial_1"
+ * />
+ * 
  */
 
 
@@ -87,6 +95,7 @@ const props = defineProps({
       { viewport: [0, 0], sizes: [[300, 150]] }
     ]
   },
+  isInterstitial: { type: Boolean, default: false }, // 仅gpt广告生效
   // AdSense responsive configuration
   configs: {
     type: Array,
@@ -114,7 +123,7 @@ const props = defineProps({
 
 const adConfig = ref(null)
 const adInsRef = ref(null)
-const { loadGPTScript, initGPTAd, destroyGPTAd, loadAdScript, initAdScript } = useAds()
+const { loadGPTScript, initGPTAd, destroyGPTAd, loadAdScript, initAdScript, initGPTInterstitialAd } = useAds()
 const route = useRoute()
 const isAdInitialized = ref(false)
 const isScriptLoaded = ref(false)
@@ -287,10 +296,15 @@ watch(() => route.fullPath, async (newPath, oldPath) => {
 
 onMounted(async () => {
   if (props.type === 'gpt') {
-    console.log('adunit>onmounted>gpt');
-    await loadGPTScript();
-    await nextTick();
-    await initGPTAd(props.gptAdId, props.gptSlot, props.gptSlotSizes, props.gptSizeMappings);
+    if (props.isInterstitial) {
+      await loadGPTScript();
+      await nextTick();
+      await initGPTInterstitialAd(props.gptAdId, props.gptSlot);
+    } else {
+      await loadGPTScript();
+      await nextTick();
+      await initGPTAd(props.gptAdId, props.gptSlot, props.gptSlotSizes, props.gptSizeMappings);
+    }
   } else {
     console.log('adunit>onmounted>adsense');
     pickAdConfig();

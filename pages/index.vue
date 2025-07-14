@@ -15,12 +15,12 @@
       </div>
     </div>
     <!-- google ads interstitial -->
-    <AdUnit
+    <!-- <AdUnit
       type="gpt"
       :isInterstitial="true"
       :gptAdId="interstitialAdId"
       :gptSlot="interstitialSlot"
-    />
+    /> -->
     <!-- google ads mobile-->
     <div class="w-full h-[250px] bg-gray-100 block md:hidden">
       <AdUnit

@@ -2,7 +2,7 @@
   <ClientOnly>
     <div class="w-full h-full">
       <!-- GPT ads -->
-      <div v-if="type === 'gpt'" :id="gptAdId" :style="gptStyle"></div>
+      <div v-if="type === 'gpt' && !isInterstitial" :id="gptAdId" :style="gptStyle" :key="gptAdId"></div>
       <!-- AdSense ads -->
       <ins
         v-else-if="type === 'adsense' && adConfig"

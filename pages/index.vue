@@ -22,7 +22,7 @@
       :gptSlot="interstitialSlot"
     /> -->
     <!-- google ads mobile-->
-    <div class="w-full h-[250px] bg-gray-100 block md:hidden">
+    <div class="w-full h-[280px] bg-gray-100 block md:hidden">
       <AdUnit
         type="gpt"
         gptAdId="HK_CN_game92_vip_banner_1"

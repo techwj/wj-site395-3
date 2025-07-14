@@ -35,7 +35,7 @@
         :gptSlotSizes="[[300,50]]"
         :gptSizeMappings="[
           { viewport: [728, 300], sizes: [] },
-          { viewport: [0, 0], sizes: [[300,50]] }
+          { viewport: [0, 0], sizes: [[300,250]] }
         ]"
         gptStyle="text-align:center;"
       />

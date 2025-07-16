@@ -7,8 +7,12 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
-    '@nuxt/image'
+    '@nuxt/image',
+    'nuxt-gtag'
   ],
+  gtag: {
+    id: 'G-V5C8M96VB5'
+  },
   content: {},
   image: {
     // image quality

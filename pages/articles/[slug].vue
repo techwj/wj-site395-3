@@ -1,8 +1,35 @@
 <template>
-  <ClientOnly>
-    <div class="mb-1">
-    </div>
-  </ClientOnly>
+  <div class="w-full h-[280px] bg-gray-100 mb-6">
+  <!-- google ads mobile-->
+  <div class="w-full h-[280px] bg-gray-100 block md:hidden">
+    <AdUnit
+      type="gpt"
+      gptAdId="HK_CN_game92_vip_banner_1"
+      gptSlot="/29746187,23103910451/HK_CN_game92.vip_banner_1"
+      :gptSlotSizes="[[300,250]]"
+      :gptSizeMappings="[
+        { viewport: [728, 300], sizes: [] },
+        { viewport: [0, 0], sizes: [[300,250]] }
+      ]"
+      gptStyle="text-align:center;"
+    />
+  </div>
+
+  <!-- google ads pc-->
+  <div class="w-full h-[100px] bg-gray-100 hidden md:block">
+    <AdUnit
+      type="gpt"
+      gptAdId="HK_CN_game92_vip_banner_7"
+      gptSlot="/29746187,23103910451/HK_CN_game92.vip_banner_7"
+      :gptSlotSizes="[[728, 90]]"
+      :gptSizeMappings="[
+        { viewport: [728, 300], sizes: [728, 90] },
+        { viewport: [0, 0], sizes: [] }
+      ]"
+      gptStyle="text-align:center;"
+    />
+  </div>
+  </div>  
   <div @click.capture="toParentCategory" class="container mx-auto px-2 py-2">
     <div v-if="pending" class="text-center">
       <p>Loading...</p>

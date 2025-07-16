@@ -1,29 +1,5 @@
 <template>
   <div class="mb-1">
-      <!-- Google AdSense -->
-    <!-- <div style="width: 320px; height: 200px;">
-      <AdUnit
-        :key="$route.fullPath"
-        type="adsense"
-        :configs="[
-          { min: 0, client: 'ca-pub-6642330019857482', slot: '6508323125', width: 320, height: 200 }
-        ]"
-      />
-    </div> -->
-
-
-    <!-- <Adunit
-      :key="$route.fullPath"
-      type="gpt"
-      gptSlot="/29746187,23103910451/HK_CN_58information.vip_banner_5"
-      gptAdId="HK_CN_58information_vip_banner_5"
-      :gptSlotSizes="[[300,250]]"
-      :gptSizeMappings="[
-        { viewport: [728, 300], sizes: [] },
-        { viewport: [0, 0], sizes: [[300,250]] }
-      ]"
-      gptStyle="text-align:center;min-width:300px;height:250px"
-    ></Adunit> -->
     </div>
   <div>
     <div>
@@ -66,7 +42,8 @@
     <div v-if="articles && articles.length > 0">
       <div class="flex flex-col gap-4">
         <template v-for="(article, index) in articles" :key="article._path">
-          <NuxtLink :to="article._path" class="flex items-center bg-[#f6f8f6] hover:bg-[#eaf3ea] border border-[#e0e7e0] rounded-2xl shadow-sm px-4 py-4 transition group">
+          <NuxtLink :to="article._path" class="flex flex-col items-center bg-[#f6f8f6] hover:bg-[#eaf3ea] border border-[#e0e7e0] rounded-2xl shadow-sm px-4 py-4 transition group">
+            <div class="flex flex-row">
             <div class="flex-1 min-w-0">
               <h2 class="text-xl font-bold mb-2" style="color:#2563eb">{{ article.title }}</h2>
               <p class="text-base mb-2">{{ article.description }}</p>
@@ -83,7 +60,39 @@
                 @error="onArticleImgError"
               />
             </div>
+            </div>
           </NuxtLink>
+         <div v-if="index === 0" class="w-full h-[280px] bg-gray-100 mb-6">
+              <!-- google ads mobile-->
+              <div class="w-full h-[280px] bg-gray-100 block md:hidden">
+                <AdUnit
+                  type="gpt"
+                  gptAdId="HK_CN_game92_vip_banner_1"
+                  gptSlot="/29746187,23103910451/HK_CN_game92.vip_banner_1"
+                  :gptSlotSizes="[[300,250]]"
+                  :gptSizeMappings="[
+                    { viewport: [728, 300], sizes: [] },
+                    { viewport: [0, 0], sizes: [[300,250]] }
+                  ]"
+                  gptStyle="text-align:center;"
+                />
+              </div>
+
+              <!-- google ads pc-->
+              <div class="w-full h-[100px] bg-gray-100 hidden md:block">
+                <AdUnit
+                  type="gpt"
+                  gptAdId="HK_CN_game92_vip_banner_7"
+                  gptSlot="/29746187,23103910451/HK_CN_game92.vip_banner_7"
+                  :gptSlotSizes="[[728, 90]]"
+                  :gptSizeMappings="[
+                    { viewport: [728, 300], sizes: [728, 90] },
+                    { viewport: [0, 0], sizes: [] }
+                  ]"
+                  gptStyle="text-align:center;"
+                />
+              </div>
+        </div>           
         </template>
       </div>
 

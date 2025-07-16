@@ -1,19 +1,5 @@
 <template>
-    <!-- Banner -->
-    <div class="relative w-full h-[200px] overflow-hidden mb-8">
-      <img
-        src="/images/common/default.webp"
-        alt="Banner"
-        class="absolute inset-0 w-full  object-cover"
-        @error="onBannerImgError"
-      />
-      <div class="absolute inset-0 bg-blue-900/30"></div>
-      <div class="absolute inset-0 flex items-center justify-center">
-        <h1 class="text-4xl md:text-5xl text-white font-bold text-center px-4" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
-          {{ config.head?.title || 'Welcome to Our Blog' }}
-        </h1>
-      </div>
-    </div>
+
     <!-- google ads interstitial -->
     <AdUnit
       type="gpt"
@@ -50,6 +36,52 @@
         gptStyle="text-align:center;"
       />
     </div>
+    <!-- Banner -->
+    <div class="relative w-full h-[140px] overflow-hidden mb-8" @click="router.push('/categories/all')">
+      <img
+        src="/images/common/default.webp"
+        alt="Banner"
+        class="absolute inset-0 w-full  object-cover"
+        @error="onBannerImgError"
+      />
+      <div class="absolute inset-0 bg-blue-900/30"></div>
+      <div class="absolute inset-0 flex items-center justify-center">
+        <h1 class="text-4xl md:text-5xl text-white font-bold text-center px-4" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+          {{ config.head?.title || 'Welcome to Our Blog' }}
+        </h1>
+      </div>
+    </div>
+
+   <!-- google ads mobile-->
+    <div class="w-full h-[250px] bg-gray-100 block md:hidden">
+      <AdUnit
+        type="gpt"
+        gptAdId="HK_CN_game92_vip_banner_2"
+        gptSlot="/29746187,23103910451/HK_CN_game92.vip_banner_2"
+        :gptSlotSizes="[[300,250]]"
+        :gptSizeMappings="[
+          { viewport: [728, 300], sizes: [] },
+          { viewport: [0, 0], sizes: [[300,250]] }
+        ]"
+        gptStyle="text-align:center;"
+      />
+    </div>
+
+    <!-- google ads pc-->
+    <div class="w-full h-[100px] bg-gray-100 hidden md:block">
+      <AdUnit
+        type="gpt"
+        gptAdId="HK_CN_game92_vip_banner_8"
+        gptSlot="/29746187,23103910451/HK_CN_game92.vip_banner_8"
+        :gptSlotSizes="[[970, 90]]"
+        :gptSizeMappings="[
+          { viewport: [728, 300], sizes: [970, 90] },
+          { viewport: [0, 0], sizes: [] }
+        ]"
+        gptStyle="text-align:center;"
+      />
+    </div>
+
 
     <!-- Categories -->
     <section class="mb-12">
@@ -117,6 +149,9 @@
 
 <script setup>
 import { onMounted, ref, computed } from "vue";
+import {useRouter} from 'vue-router';
+
+const router = useRouter();
 
 // category list
 const { data: categoriesData } = await useFetch("/api/categories");

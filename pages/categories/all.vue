@@ -1,29 +1,5 @@
 <template>
     <div class="mb-1">
-      <!-- Google AdSense -->
-    <!-- <div style="width: 320px; height: 200px;">
-      <AdUnit
-        :key="$route.fullPath"
-        type="adsense"
-        :configs="[
-          { min: 0, client: 'ca-pub-6642330019857482', slot: '6508323125', width: 320, height: 200 }
-        ]"
-      />
-    </div> -->
-
-
-    <!-- <Adunit
-      :key="$route.fullPath"
-      type="gpt"
-      gptSlot="/29746187,23103910451/HK_CN_58information.vip_banner_5"
-      gptAdId="HK_CN_58information_vip_banner_5"
-      :gptSlotSizes="[[300,250]]"
-      :gptSizeMappings="[
-        { viewport: [728, 300], sizes: [] },
-        { viewport: [0, 0], sizes: [[300,250]] }
-      ]"
-      gptStyle="text-align:center;min-width:300px;height:250px"
-    ></Adunit> -->
     </div>
   <div style="background:#f8fafc; min-height:100vh;">
     <h1 @click="toFirstCategory" class="text-3xl font-extrabold mb-6 flex items-center" style="color:#2563eb; cursor:pointer;">

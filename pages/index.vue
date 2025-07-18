@@ -42,6 +42,11 @@
       anchorPosition="bottom"
       gptAdId="HK_CN_mobile_game92_vip_anchor_2"
       gptSlot="/29746187,23103910451/HK_CN_mobile.game92.vip_anchor_2"
+      :gptSlotSizes="[[300,100],[300,50],[320,100],[320,50]]"
+      :gptSizeMappings="[
+        { viewport: [728, 300], sizes: [] },
+        { viewport: [0, 0], sizes: [[300,100],[300,50],[320,100],[320,50]] }
+      ]"
     />
   </div>
 

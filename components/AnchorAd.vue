@@ -53,7 +53,7 @@ const btnId = `AdAAnchorBtn_${props.gptAdId}`
 
 const anchorClass = computed(() => {
   return [
-    props.position === 'top' ? 'AdAAnchor_Top' : 'AdAAnchor_Bot',
+    props.position === 'top' ? 'ada-anchor-top' : 'ada-anchor-bot',
     'anchor-root'
   ]
 })
@@ -102,10 +102,10 @@ onBeforeUnmount(() => {
   z-index: 999;
   padding: 2px 0;
 }
-.ADAAnchor_Bot {
+.ada-anchor-bot {
   bottom: 0;
 }
-.ADAAnchor_Top {
+.ada-anchor-top {
   top: 0;
 }
 .anchor-btn {
@@ -127,11 +127,12 @@ onBeforeUnmount(() => {
   border-radius: 3px 3px 0 0;
 }
 .anchor-ad {
-  width: max-content;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
   transition: height 0.2s;
+  text-align: center;
 }
 .anchor-gpt-ad {
   min-width: 300px;

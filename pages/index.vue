@@ -1,5 +1,5 @@
 <template>
-
+  <div class="w-full h-full mt-4">
     <!-- google ads interstitial -->
     <AdUnit
       type="gpt"
@@ -8,15 +8,15 @@
       :gptSlot="interstitialSlot"
     />
     <!-- google ads mobile-->
-    <div class="w-full h-[280px] bg-gray-100 block md:hidden">
+    <div class="w-full h-[50px] bg-gray-100 block md:hidden">
       <AdUnit
         type="gpt"
         gptAdId="HK_CN_game92_vip_banner_1"
         gptSlot="/29746187,23103910451/HK_CN_game92.vip_banner_1"
-        :gptSlotSizes="[[300,250]]"
+        :gptSlotSizes="[[300,50]]"
         :gptSizeMappings="[
           { viewport: [728, 300], sizes: [] },
-          { viewport: [0, 0], sizes: [[300,250]] }
+          { viewport: [0, 0], sizes: [[300,50]] }
         ]"
         gptStyle="text-align:center;"
       />
@@ -36,6 +36,15 @@
         gptStyle="text-align:center;"
       />
     </div>
+
+    <AdUnit
+      type="anchor"
+      anchorPosition="bottom"
+      gptAdId="HK_CN_mobile_game92_vip_anchor_2"
+      gptSlot="/29746187,23103910451/HK_CN_mobile.game92.vip_anchor_2"
+    />
+  </div>
+
     <!-- Banner -->
     <div class="relative w-full h-[140px] overflow-hidden mb-8" @click="router.push('/categories/all')">
       <img

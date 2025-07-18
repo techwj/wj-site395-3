@@ -1,8 +1,19 @@
 <template>
   <ClientOnly>
     <div class="w-full h-full">
+      <!-- Anchor ads -->
+      <AnchorAd
+        v-if="type === 'anchor'"
+        :position="anchorPosition"
+        :gptAdId="gptAdId"
+        :gptSlot="gptSlot"
+        :gptSlotSizes="gptSlotSizes"
+        :gptSizeMappings="gptSizeMappings"
+        :anchorStyle="anchorStyle"
+        :adContainerStyle="adContainerStyle"
+      />
       <!-- GPT ads -->
-      <div v-if="type === 'gpt' && !isInterstitial" :id="gptAdId" :style="gptStyle" :key="gptAdId"></div>
+      <div v-else-if="type === 'gpt' && !isInterstitial" :id="gptAdId" :style="gptStyle" :key="gptAdId"></div>
       <!-- AdSense ads -->
       <ins
         v-else-if="type === 'adsense' && adConfig"
@@ -80,9 +91,10 @@
 import { ref, onMounted, onUnmounted, watch, nextTick, onBeforeUpdate, onBeforeUnmount } from 'vue'
 import { useRoute } from 'vue-router'
 import { useAds } from '~/composables/useAds'
+import AnchorAd from './AnchorAd.vue'
 
 const props = defineProps({
-  type: { type: String, default: 'adsense' }, // 'gpt' or 'adsense'
+  type: { type: String, default: 'adsense' }, // 'gpt' or 'adsense' or 'anchor'
   // GPT ads parameters
   gptAdId: { type: String, default: 'gpt-ad-1' },
   gptSlot: { type: String, default: '' },
@@ -96,6 +108,10 @@ const props = defineProps({
     ]
   },
   isInterstitial: { type: Boolean, default: false }, // 仅gpt广告生效
+  // Anchor ad specific
+  anchorPosition: { type: String, default: 'bottom' }, // 'top' | 'bottom'
+  anchorStyle: { type: String, default: '' },
+  adContainerStyle: { type: String, default: '' },
   // AdSense responsive configuration
   configs: {
     type: Array,
@@ -305,6 +321,10 @@ onMounted(async () => {
       await nextTick();
       await initGPTAd(props.gptAdId, props.gptSlot, props.gptSlotSizes, props.gptSizeMappings);
     }
+  } else if (props.type === 'anchor') {
+    // Anchor ad does not have a direct script loading or initialization like GPT/AdSense
+    // It just renders the component and passes props.
+    // No specific onMounted logic needed here for anchor ads.
   } else {
     console.log('adunit>onmounted>adsense');
     pickAdConfig();
@@ -325,6 +345,8 @@ onBeforeUpdate(() => {
 onBeforeUnmount(() => {
   if (props.type === 'gpt') {
     destroyGPTAd(props.gptAdId);
+  } else if (props.type === 'anchor') {
+    // No specific cleanup needed for AnchorAd
   } else {
     console.log('adunit>before unmount');
     cleanupAd();

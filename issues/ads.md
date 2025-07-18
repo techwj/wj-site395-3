@@ -276,4 +276,73 @@
 
 
 
+
+
+
+<!-- 锚定广告 -->
+
+<!-- AnyMind_Anchor_Ad_Tag_V2.9 -->
+ <style>
+ .AdAAnchor_Bot{ bottom:0; position:fixed; width:100%; padding:2px 0} .AdAAnchor_Bot #AdAAnchorBtn{ top:-16px; position:absolute; padding:1px 12px; font-family:sans-serif; font-size:6px; border-radius:3px 3px 0 0;} .AdAAnchor_Top{ top:0; position:fixed; width:100%; padding:2px 0} .AdAAnchor_Top #AdAAnchorBtn{ bottom:-16px; position:absolute; padding:1px 12px; font-family:sans-serif; font-size:6px; border-radius:0 0 3px 3px;} #AdAAnchor, #AdAAnchorBtn{ z-index:999; background:#eee; border:0px solid #eee; left:0;} #AdAAnchorAd{ width:max-content; margin:0px auto; position:relative; overflow:hidden;} #AdAAnchorBtn>i{ border:solid #666; border-width:0 2.5px 2.5px 0; display:inline-block; padding:4px; position:relative; z-index:999;} .AdA_bottomUp, .AdA_topDown{ transform:rotate(-135deg); -webkit-transform:rotate(-135deg); vertical-align:super; bottom:-6px;} .AdA_bottomDown, .AdA_topUp{ transform:rotate(45deg); -webkit-transform:rotate(45deg); vertical-align:super; bottom:0px;}
+ </style>
+ <div id='AdAAnchor' class='AdAAnchor_Bot'></div>
+ <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+ <script>
+ var width = window.innerWidth || document.documentElement.clientWidth;
+ document.querySelector('#AdAAnchor').innerHTML =
+ "<a id='AdAAnchorBtn' onclick='AdAAnchorToggle()'><i class=''></i></a><div id='AdAAnchorAd'><div id='HK_CN_mobile_game92_vip_anchor_1';'></div></div>";
+ window.googletag = window.googletag || { cmd: [] };
+ googletag.cmd.push(function () {
+ var AdAAnchor = googletag.sizeMapping()
+ .addSize([728, 300], [])
+ .addSize([0, 0], [[300,100],[300,50],[320,100],[320,50]])
+ .build();
+ googletag.defineSlot('/29746187,23103910451/HK_CN_mobile.game92.vip_anchor_1', [[300,100],[300,50],[320,100],[320,50]], 'HK_CN_mobile_game92_vip_anchor_1').defineSizeMapping(AdAAnchor).setCollapseEmptyDiv(true) .addService(googletag.pubads());
+ googletag.pubads().enableSingleRequest();
+ googletag.enableServices();
+ googletag.display('HK_CN_mobile_game92_vip_anchor_1');
+ });
+ var e = document.querySelector('#AdAAnchorAd');
+ var f = document.querySelector('#AdAAnchorBtn');
+ var g = f.querySelector('i');
+ 
+ function AdAArrow(){ if (getComputedStyle(f).getPropertyValue('bottom')=='-16px'){ (e.style.height=='0px') ? (g.className='AdA_topUp') :(g.className='AdA_topDown');} else{ (e.style.height=='0px') ? (g.className='AdA_bottomUp') :(g.className='AdA_bottomDown');};}; AdAArrow();
+ function AdAAnchorToggle(){ (e.className=='AdAAnchorAd hidden') ? (e.style.height="auto", setTimeout(function (){ e.className='AdAAnchorAd'}, 100)) :(e.className='AdAAnchorAd hidden', e.style.height='0px'); AdAArrow();};
+ </script>
+ 
+
+
+
+
+
+ <!-- AnyMind_Anchor_Ad_Tag_V2.9 -->
+ <style>
+ .AdAAnchor_Bot{ bottom:0; position:fixed; width:100%; padding:2px 0} .AdAAnchor_Bot #AdAAnchorBtn{ top:-16px; position:absolute; padding:1px 12px; font-family:sans-serif; font-size:6px; border-radius:3px 3px 0 0;} .AdAAnchor_Top{ top:0; position:fixed; width:100%; padding:2px 0} .AdAAnchor_Top #AdAAnchorBtn{ bottom:-16px; position:absolute; padding:1px 12px; font-family:sans-serif; font-size:6px; border-radius:0 0 3px 3px;} #AdAAnchor, #AdAAnchorBtn{ z-index:999; background:#eee; border:0px solid #eee; left:0;} #AdAAnchorAd{ width:max-content; margin:0px auto; position:relative; overflow:hidden;} #AdAAnchorBtn>i{ border:solid #666; border-width:0 2.5px 2.5px 0; display:inline-block; padding:4px; position:relative; z-index:999;} .AdA_bottomUp, .AdA_topDown{ transform:rotate(-135deg); -webkit-transform:rotate(-135deg); vertical-align:super; bottom:-6px;} .AdA_bottomDown, .AdA_topUp{ transform:rotate(45deg); -webkit-transform:rotate(45deg); vertical-align:super; bottom:0px;}
+ </style>
+ <div id='AdAAnchor' class='AdAAnchor_Bot'></div>
+ <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+ <script>
+ var width = window.innerWidth || document.documentElement.clientWidth;
+ document.querySelector('#AdAAnchor').innerHTML =
+ "<a id='AdAAnchorBtn' onclick='AdAAnchorToggle()'><i class=''></i></a><div id='AdAAnchorAd'><div id='HK_CN_mobile_game92_vip_anchor_2';'></div></div>";
+ window.googletag = window.googletag || { cmd: [] };
+ googletag.cmd.push(function () {
+ var AdAAnchor = googletag.sizeMapping()
+ .addSize([728, 300], [])
+ .addSize([0, 0], [[300,100],[300,50],[320,100],[320,50]])
+ .build();
+ googletag.defineSlot('/29746187,23103910451/HK_CN_mobile.game92.vip_anchor_2', [[300,100],[300,50],[320,100],[320,50]], 'HK_CN_mobile_game92_vip_anchor_2').defineSizeMapping(AdAAnchor).setCollapseEmptyDiv(true) .addService(googletag.pubads());
+ googletag.pubads().enableSingleRequest();
+ googletag.enableServices();
+ googletag.display('HK_CN_mobile_game92_vip_anchor_2');
+ });
+ var e = document.querySelector('#AdAAnchorAd');
+ var f = document.querySelector('#AdAAnchorBtn');
+ var g = f.querySelector('i');
+ 
+ function AdAArrow(){ if (getComputedStyle(f).getPropertyValue('bottom')=='-16px'){ (e.style.height=='0px') ? (g.className='AdA_topUp') :(g.className='AdA_topDown');} else{ (e.style.height=='0px') ? (g.className='AdA_bottomUp') :(g.className='AdA_bottomDown');};}; AdAArrow();
+ function AdAAnchorToggle(){ (e.className=='AdAAnchorAd hidden') ? (e.style.height="auto", setTimeout(function (){ e.className='AdAAnchorAd'}, 100)) :(e.className='AdAAnchorAd hidden', e.style.height='0px'); AdAArrow();};
+ </script>
+ 
+
  ```

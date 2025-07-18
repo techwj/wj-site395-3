@@ -242,12 +242,58 @@ export const useAds = () => {
     }
   }
 
+  // Anchor Ad: 集中封装锚定广告的 DOM/事件/广告位初始化
+  /**
+   * 初始化锚定广告
+   * @param {Object} options
+   *   - position: 'top' | 'bottom'
+   *   - adId: 广告容器id
+   *   - slot: GPT广告slot
+   *   - sizeMappings: GPT广告sizeMapping数组
+   *   - slotSizes: GPT广告slotSizes
+   *   - anchorRef: 锚定容器ref
+   *   - adContainerRef: 广告内容ref
+   */
+  const initAnchorAd = async ({ position = 'bottom', adId, slot, sizeMappings, slotSizes, anchorRef, adContainerRef }) => {
+    await loadGPTScript();
+    // 生成/重置 DOM 结构
+    if (anchorRef && anchorRef.value && adContainerRef && adContainerRef.value) {
+      // 展开/收起逻辑
+      let isCollapsed = false;
+      const btn = anchorRef.value.querySelector('.anchor-btn');
+      const adContainer = adContainerRef.value;
+      const arrow = btn.querySelector('i');
+      const updateArrow = () => {
+        if (position === 'top') {
+          arrow.className = isCollapsed ? 'AdA_topUp' : 'AdA_topDown';
+        } else {
+          arrow.className = isCollapsed ? 'AdA_bottomUp' : 'AdA_bottomDown';
+        }
+      };
+      const toggle = () => {
+        isCollapsed = !isCollapsed;
+        adContainer.style.height = isCollapsed ? '0px' : 'auto';
+        updateArrow();
+      };
+      btn.addEventListener('click', toggle);
+      // 初始化广告位
+      await initGPTAd(adId, slot, slotSizes, sizeMappings);
+      updateArrow();
+      // 返回销毁函数
+      return () => {
+        btn.removeEventListener('click', toggle);
+        destroyGPTAd(adId);
+      };
+    }
+  };
+
   return {
     loadGPTScript,    // load GPT script
     initGPTAd,        // init GPT ad
     destroyGPTAd,     // destroy GPT ad
     loadAdScript,     // load AdSense script
     initAdScript,      // init AdSense ad
-    initGPTInterstitialAd // init GPT interstitial ad
+    initGPTInterstitialAd, // init GPT interstitial ad
+    initAnchorAd      // 新增：锚定广告一体化初始化
   }
 } 

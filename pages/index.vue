@@ -1,12 +1,5 @@
 <template>
   <div class="w-full h-full mt-4">
-    <!-- google ads interstitial -->
-    <AdUnit
-      type="gpt"
-      :isInterstitial="true"
-      :gptAdId="interstitialAdId"
-      :gptSlot="interstitialSlot"
-    />
     <!-- google ads mobile-->
     <div class="w-full h-[50px] bg-gray-100 block md:hidden">
       <AdUnit
@@ -95,6 +88,14 @@
         gptStyle="text-align:center;"
       />
     </div>
+
+    <!-- google ads interstitial -->
+    <AdUnit
+      type="gpt"
+      :isInterstitial="true"
+      :gptAdId="interstitialAdId"
+      :gptSlot="interstitialSlot"
+    />
 
 
     <!-- Categories -->
@@ -231,8 +232,8 @@ onMounted(() => {
   isMobile.value = window.innerWidth < 768
 })
 // interstitial ad parameters
-const interstitialAdId = computed(() => isMobile.value ? 'HK_CN_game92_vip_interstitial_1' : 'HK_CN_game92_vip_interstitial_2')
-const interstitialSlot = computed(() => isMobile.value ? '/29746187,23103910451/HK_CN_game92.vip_interstitial_1' : '/29746187,23103910451/HK_CN_game92.vip_interstitial_2')
+const interstitialAdId = computed(() => isMobile.value ? 'HK_CN_mobile_game92_vip_interstitial_1' : 'HK_CN_mobile_game92_vip_interstitial_2')
+const interstitialSlot = computed(() => isMobile.value ? '/29746187,23103910451/HK_CN_mobile.game92.vip_interstitial_1' : '/29746187,23103910451/HK_CN_mobile.game92.vip_interstitial_2')
 </script>
 
 <style scoped>

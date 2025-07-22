@@ -1,6 +1,35 @@
 <template>
-  <div class="mb-1">
+  <div class="w-full h-full mt-4">
+    <!-- google ads mobile-->
+    <div class="w-full h-[50px] bg-gray-100 block md:hidden">
+      <AdUnit
+        type="gpt"
+        gptAdId="HK_CN_mobile_game92_vip_banner_5"
+        gptSlot="/29746187,23103910451/HK_CN_mobile.game92.vip_banner_5"
+        :gptSlotSizes="[[300,50]]"
+        :gptSizeMappings="[
+          { viewport: [728, 300], sizes: [] },
+          { viewport: [0, 0], sizes: [[300,50]] }
+        ]"
+        gptStyle="text-align:center;"
+      />
     </div>
+
+    <!-- google ads pc-->
+    <div class="w-full h-[100px] bg-gray-100 hidden md:block">
+      <AdUnit
+        type="gpt"
+        gptAdId="HK_CN_mobile_game92_vip_banner_8"
+        gptSlot="/29746187,23103910451/HK_CN_mobile.game92.vip_banner_8"
+        :gptSlotSizes="[[728, 90]]"
+        :gptSizeMappings="[
+          { viewport: [728, 300], sizes: [728, 90] },
+          { viewport: [0, 0], sizes: [] }
+        ]"
+        gptStyle="text-align:center;"
+      />
+    </div>
+  </div>
   <div>
     <div>
       <h2 @click="toFirstArticle" class="text-2xl font-extrabold mb-6 flex items-center" style="color:#2563eb;">
@@ -13,8 +42,8 @@
     <div class="w-full h-[250px] bg-gray-100 block md:hidden">
       <AdUnit
         type="gpt"
-        gptAdId="HK_CN_game92_vip_banner_3"
-        gptSlot="/29746187,23103910451/HK_CN_game92.vip_banner_3"
+        gptAdId="HK_CN_mobile_game92_vip_banner_6"
+        gptSlot="/29746187,23103910451/HK_CN_mobile.game92.vip_banner_6"
         :gptSlotSizes="[[300,250]]"
         :gptSizeMappings="[
           { viewport: [728, 300], sizes: [] },
@@ -28,8 +57,8 @@
     <div class="w-full h-[100px] bg-gray-100 hidden md:block">
       <AdUnit
         type="gpt"
-        gptAdId="HK_CN_game92_vip_banner_9"
-        gptSlot="/29746187,23103910451/HK_CN_game92.vip_banner_9"
+        gptAdId="HK_CN_mobile_game92_vip_banner_10"
+        gptSlot="/29746187,23103910451/HK_CN_mobile.game92.vip_banner_10"
         :gptSlotSizes="[[728, 90]]"
         :gptSizeMappings="[
           { viewport: [728, 300], sizes: [728, 90] },

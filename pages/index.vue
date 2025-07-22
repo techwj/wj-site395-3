@@ -11,8 +11,8 @@
     <div class="w-full h-[50px] bg-gray-100 block md:hidden">
       <AdUnit
         type="gpt"
-        gptAdId="HK_CN_game92_vip_banner_1"
-        gptSlot="/29746187,23103910451/HK_CN_game92.vip_banner_1"
+        gptAdId="HK_CN_mobile_game92_vip_banner_1"
+        gptSlot="/29746187,23103910451/HK_CN_mobile.game92.vip_banner_1"
         :gptSlotSizes="[[300,50]]"
         :gptSizeMappings="[
           { viewport: [728, 300], sizes: [] },
@@ -26,8 +26,8 @@
     <div class="w-full h-[100px] bg-gray-100 hidden md:block">
       <AdUnit
         type="gpt"
-        gptAdId="HK_CN_game92_vip_banner_7"
-        gptSlot="/29746187,23103910451/HK_CN_game92.vip_banner_7"
+        gptAdId="HK_CN_mobile_game92_vip_banner_7"
+        gptSlot="/29746187,23103910451/HK_CN_mobile.game92.vip_banner_7"
         :gptSlotSizes="[[728, 90]]"
         :gptSizeMappings="[
           { viewport: [728, 300], sizes: [728, 90] },
@@ -70,8 +70,8 @@
     <div class="w-full h-[250px] bg-gray-100 block md:hidden">
       <AdUnit
         type="gpt"
-        gptAdId="HK_CN_game92_vip_banner_2"
-        gptSlot="/29746187,23103910451/HK_CN_game92.vip_banner_2"
+        gptAdId="HK_CN_mobile_game92_vip_banner_2"
+        gptSlot="/29746187,23103910451/HK_CN_mobile.game92.vip_banner_2"
         :gptSlotSizes="[[300,250]]"
         :gptSizeMappings="[
           { viewport: [728, 300], sizes: [] },
@@ -85,8 +85,8 @@
     <div class="w-full h-[100px] bg-gray-100 hidden md:block">
       <AdUnit
         type="gpt"
-        gptAdId="HK_CN_game92_vip_banner_8"
-        gptSlot="/29746187,23103910451/HK_CN_game92.vip_banner_8"
+        gptAdId="HK_CN_mobile_game92_vip_banner_8"
+        gptSlot="/29746187,23103910451/HK_CN_mobile.game92.vip_banner_8"
         :gptSlotSizes="[[970, 90]]"
         :gptSizeMappings="[
           { viewport: [728, 300], sizes: [970, 90] },

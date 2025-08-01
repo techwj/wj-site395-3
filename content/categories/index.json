@@ -12,7 +12,8 @@
       "description": "Learn the essential principles of H5 game development. Master HTML5 canvas, WebGL, and JavaScript game programming for creating engaging cross-platform games.",
       "longTailTitleArr": [
         "Mastering Mobile H5 Game Development: Optimization Techniques",
-        "Mastering HTML5 Game Physics: A Beginner's Guide"
+        "Mastering HTML5 Game Physics: A Beginner's Guide",
+        "HTML5 Game Development: A Beginner's Guide to Coding Fun"
       ],
       "image_prompt": "A professional workspace showing H5 game development with code editor, HTML5 canvas elements, and mobile devices displaying game interfaces"
     },
@@ -23,7 +24,8 @@
       "description": "Explore popular HTML5 game frameworks like Phaser, Three.js, and Babylon.js. Compare features, performance, and choose the best framework for your game project.",
       "longTailTitleArr": [
         "Best H5 Game Frameworks for Beginners: A Comprehensive Guide",
-        "HTML5 Mobile Game Optimization: Boost Performance & UX"
+        "HTML5 Mobile Game Optimization: Boost Performance & UX",
+        "Mastering Mobile HTML5 Game Development: Optimization Tips & Tricks"
       ],
       "image_prompt": "Multiple game framework logos displayed on screen with code examples and framework comparison charts"
     },
@@ -34,7 +36,8 @@
       "description": "Optimize H5 games for mobile devices with performance tuning, touch controls, and responsive design. Ensure smooth gameplay across all mobile platforms.",
       "longTailTitleArr": [
         "Cross-Platform H5 Game Development: Build Once, Deploy Everywhere",
-        "Cross-Platform HTML5 Game Development: Tools and Techniques"
+        "Cross-Platform HTML5 Game Development: Tools and Techniques",
+        "Cross-Platform HTML5 Games: Build Once, Deploy Everywhere Guide"
       ],
       "image_prompt": "Mobile devices showing optimized H5 games with performance metrics, touch interface elements, and responsive design indicators"
     },
@@ -45,7 +48,8 @@
       "description": "Create games that work seamlessly across web, mobile, and desktop platforms. Learn platform-specific optimizations and universal game design principles.",
       "longTailTitleArr": [
         "Advanced HTML5 Game Development: Mastering Canvas and WebGL",
-        "Building Your First HTML5 Game: Step-by-Step Tutorial"
+        "Building Your First HTML5 Game: Step-by-Step Tutorial",
+        "Top HTML5 Game Frameworks: Choosing the Right Tools for Your Project"
       ],
       "image_prompt": "Multiple devices (desktop, tablet, phone) displaying the same H5 game with cross-platform compatibility indicators"
     },
@@ -56,7 +60,8 @@
       "description": "Master game asset creation, sprite animation, and graphics optimization for H5 games. Learn efficient asset management and visual design techniques.",
       "longTailTitleArr": [
         "HTML5 Game Performance Optimization: Tips and Tricks",
-        "Advanced HTML5 Game Development: Mastering Canvas & WebGL"
+        "Advanced HTML5 Game Development: Mastering Canvas & WebGL",
+        "HTML5 Game Development Best Practices: Code Efficiency and Performance"
       ],
       "image_prompt": "Game development workspace with sprite sheets, graphic design tools, and optimized game assets displayed on screen"
     },
@@ -67,7 +72,8 @@
       "description": "Implement immersive audio experiences in H5 games. Learn Web Audio API, sound optimization, and creating engaging sound effects and background music.",
       "longTailTitleArr": [
         "Creating Engaging H5 Games: Design and User Experience",
-        "HTML5 Game Frameworks Comparison: Phaser, PixiJS, and More"
+        "HTML5 Game Frameworks Comparison: Phaser, PixiJS, and More",
+        "Advanced HTML5 Game Development: Taking Your Skills to the Next Level"
       ],
       "image_prompt": "Audio mixing interface with sound waveforms, game audio controls, and sound effect libraries for H5 game development"
     },
@@ -78,7 +84,8 @@
       "description": "Optimize H5 game performance with advanced techniques. Learn memory management, rendering optimization, and achieving 60fps gameplay across devices.",
       "longTailTitleArr": [
         "Monetizing Your H5 Games: Effective Strategies and Best Practices",
-        "Monetizing Your HTML5 Games: Effective Strategies"
+        "Monetizing Your HTML5 Games: Effective Strategies",
+        "Creating Engaging HTML5 Mobile Games: User Experience Design Tips"
       ],
       "image_prompt": "Performance monitoring dashboard showing FPS metrics, memory usage, and optimization tools for H5 game development"
     },
@@ -89,7 +96,8 @@
       "description": "Implement effective monetization strategies for H5 games. Learn in-app purchases, advertising integration, and revenue optimization techniques.",
       "longTailTitleArr": [
         "Building a Career in H5 Game Development: A Step-by-Step Guide",
-        "HTML5 Game Design Best Practices: UI/UX and Gameplay"
+        "HTML5 Game Design Best Practices: UI/UX and Gameplay",
+        "Monetizing Your HTML5 Games: Effective Strategies for Revenue Generation"
       ],
       "image_prompt": "Monetization dashboard showing revenue metrics, ad integration examples, and in-app purchase interfaces for H5 games"
     }

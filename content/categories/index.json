@@ -18,7 +18,8 @@
         "Mastering Mobile H5 Game Development: Optimization Techniques",
         "Setting Up Your Development Environment and Tools for Your First HTML5 Game Project",
         "Step-by-Step Guide: Setting Up Your First HTML5 Game Development Environment",
-        "How to Evaluate HTML5 Game Development Frameworks for Optimal Performance and Scalability"
+        "How to Evaluate HTML5 Game Development Frameworks for Optimal Performance and Scalability",
+        "Learning Core Game Loop Concepts with Phaser 3 for H5 Development"
       ],
       "image_prompt": "A professional workspace showing H5 game development with code editor, HTML5 canvas elements, and mobile devices displaying game interfaces"
     },
@@ -35,7 +36,8 @@
         "Best H5 Game Frameworks for Cross-Platform Development in 2024",
         "Optimizing Graphics and Assets for Enhanced Mobile HTML5 Game Performance",
         "Advanced Techniques for Boosting HTML5 Game Performance on All Mobile Devices",
-        "Overcoming Challenges in Cross-Platform HTML5 Game Development: Tools and Techniques"
+        "Overcoming Challenges in Cross-Platform HTML5 Game Development: Tools and Techniques",
+        "Mastering Asset Loading & Rendering Optimization for High-Performance HTML5 Games"
       ],
       "image_prompt": "Multiple game framework logos displayed on screen with code examples and framework comparison charts"
     },
@@ -52,7 +54,8 @@
         "HTML5 Game Development Tutorial: Build Your First Game Step-by-Step",
         "Evaluating HTML5 Game Engines Based on Project Scope and Developer Experience",
         "Comparing Top HTML5 Game Frameworks for Seamless Cross-Platform Development and Deployment",
-        "Advanced Asset Optimization Strategies for High-Performance Mobile HTML5 Games"
+        "Advanced Asset Optimization Strategies for High-Performance Mobile HTML5 Games",
+        "Designing Responsive H5 Games: Adapting to Mobile & Desktop Screens for Cross-Platform Success"
       ],
       "image_prompt": "Mobile devices showing optimized H5 games with performance metrics, touch interface elements, and responsive design indicators"
     },
@@ -69,7 +72,8 @@
         "Advanced H5 Game Development: Implementing AI and Physics Engines",
         "Exploring Different Physics Libraries for Dynamic and Realistic HTML5 Game Interactions",
         "Mastering Pixel Art and Sprite Sheet Animation for Engaging HTML5 Games",
-        "Crafting Engaging Character Animations for Immersive HTML5 Game Experiences"
+        "Crafting Engaging Character Animations for Immersive HTML5 Game Experiences",
+        "Implementing Rewarded Video Ads: Maximizing Revenue in Your HTML5 Games"
       ],
       "image_prompt": "Multiple devices (desktop, tablet, phone) displaying the same H5 game with cross-platform compatibility indicators"
     },
@@ -86,7 +90,8 @@
         "Optimizing H5 Game Performance: Tips and Tricks for Smooth Gameplay",
         "Implementing In-App Purchases and Advertising for Optimal HTML5 Game Monetization",
         "Implementing In-App Purchases and Ad Networks to Maximize HTML5 Game Revenue",
-        "Implementing Ethical Monetization Tactics for Sustainable HTML5 Game Revenue Growth"
+        "Implementing Ethical Monetization Tactics for Sustainable HTML5 Game Revenue Growth",
+        "Enhancing Player Experience: Crafting Intuitive UI/UX for H5 Games"
       ],
       "image_prompt": "Game development workspace with sprite sheets, graphic design tools, and optimized game assets displayed on screen"
     },
@@ -103,7 +108,8 @@
         "Cross-Platform H5 Game Development: Targeting iOS, Android, and Web",
         "Mastering Advanced Rendering Techniques and Complex AI in HTML5 Game Development",
         "Utilizing Developer Tools for Efficient Debugging and Performance Testing of H5 Games",
-        "Building Custom Physics Systems for Unique Interactions in Advanced HTML5 Games"
+        "Building Custom Physics Systems for Unique Interactions in Advanced HTML5 Games",
+        "Advanced Collision Detection and Resolution in HTML5 Games with Physics Engines"
       ],
       "image_prompt": "Audio mixing interface with sound waveforms, game audio controls, and sound effect libraries for H5 game development"
     },
@@ -120,7 +126,8 @@
         "H5 Game Development Best Practices: Code Structure and Design Patterns",
         "Utilizing Frameworks and Tools for Efficient Cross-Platform HTML5 Game Deployment",
         "Building Custom Physics Behaviors and Advanced Collision Detection in HTML5 Games",
-        "Automated Testing Workflows for Efficient HTML5 Game Development and Quality Assurance"
+        "Automated Testing Workflows for Efficient HTML5 Game Development and Quality Assurance",
+        "Mastering WebSocket Communication for Real-time Multiplayer H5 Game Experiences"
       ],
       "image_prompt": "Performance monitoring dashboard showing FPS metrics, memory usage, and optimization tools for H5 game development"
     },
@@ -137,7 +144,8 @@
         "From Zero to Hero: A Comprehensive Guide to H5 Game Development",
         "Implementing Automated Testing and Performance Profiling for HTML5 Games",
         "Implementing Anti-Tampering and Data Encryption to Secure Your HTML5 Game Against Cheating",
-        "Securing Your Multiplayer HTML5 Game: Best Practices for Preventing Cheats and Exploits"
+        "Securing Your Multiplayer HTML5 Game: Best Practices for Preventing Cheats and Exploits",
+        "Implementing Skeletal Animation for Dynamic Character Movement in HTML5 Games"
       ],
       "image_prompt": "Monetization dashboard showing revenue metrics, ad integration examples, and in-app purchase interfaces for H5 games"
     }

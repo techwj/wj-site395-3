@@ -1,35 +1,4 @@
 <template>
-  <div class="w-full h-full mt-4">
-    <!-- google ads mobile-->
-    <div class="w-full h-[50px] bg-gray-100 block md:hidden">
-      <AdUnit
-        type="gpt"
-        gptAdId="HK_CN_mobile_game92_vip_banner_6"
-        gptSlot="/29746187,23103910451/HK_CN_mobile.game92.vip_banner_6"
-        :gptSlotSizes="[[300,50]]"
-        :gptSizeMappings="[
-          { viewport: [728, 300], sizes: [] },
-          { viewport: [0, 0], sizes: [[300,50]] }
-        ]"
-        gptStyle="text-align:center;"
-      />
-    </div>
-
-    <!-- google ads pc-->
-    <div class="w-full h-[100px] bg-gray-100 hidden md:block">
-      <AdUnit
-        type="gpt"
-        gptAdId="HK_CN_mobile_game92_vip_banner_7"
-        gptSlot="/29746187,23103910451/HK_CN_mobile.game92.vip_banner_7"
-        :gptSlotSizes="[[728, 90]]"
-        :gptSizeMappings="[
-          { viewport: [728, 300], sizes: [728, 90] },
-          { viewport: [0, 0], sizes: [] }
-        ]"
-        gptStyle="text-align:center;"
-      />
-    </div>
-  </div>
   <div @click.capture="toParentCategory" class="container mx-auto px-2 py-2">
     <div v-if="pending" class="text-center">
       <p>Loading...</p>
@@ -53,35 +22,6 @@
         @error="onImgError"
         loading="lazy"
       /> -->
-    <!-- google ads mobile-->
-    <div class="w-full h-[250px] bg-gray-100 block md:hidden">
-      <AdUnit
-        type="gpt"
-        gptAdId="HK_CN_mobile_game92_vip_banner_3"
-        gptSlot="/29746187,23103910451/HK_CN_mobile.game92.vip_banner_3"
-        :gptSlotSizes="[[300,50]]"
-        :gptSizeMappings="[
-          { viewport: [728, 300], sizes: [] },
-          { viewport: [0, 0], sizes: [[300,250]] }
-        ]"
-        gptStyle="text-align:center;"
-      />
-    </div>
-
-    <!-- google ads pc-->
-    <div class="w-full h-[100px] bg-gray-100 hidden md:block">
-      <AdUnit
-        type="gpt"
-        gptAdId="HK_CN_mobile_game92_vip_banner_10"
-        gptSlot="/29746187,23103910451/HK_CN_mobile.game92.vip_banner_10"
-        :gptSlotSizes="[[970, 90]]"
-        :gptSizeMappings="[
-          { viewport: [728, 300], sizes: [970, 90] },
-          { viewport: [0, 0], sizes: [] }
-        ]"
-        gptStyle="text-align:center;"
-      />
-    </div>
       <div class="prose max-w-none">
         <div v-if="renderedContentFirstHalf" v-html="renderedContentFirstHalf"></div>
 

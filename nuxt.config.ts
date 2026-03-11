@@ -92,10 +92,18 @@ export default defineNuxtConfig({
   app: {
     head: {
       script: [
+        // 广告代码: highperformanceformat.com banner (320x50)
+        // bodyClose: 脚本在 body 末尾，invoke.js 就地插入 iframe 才可见
+        // tagPriority: atOptions(0) 严格先于 invoke.js(1)
         {
-          src: "https://securepubads.g.doubleclick.net/tag/js/gpt.js",
-          async: true,
-          crossorigin: "anonymous"
+          innerHTML: `atOptions = { 'key': '3d42be0706682e2b744f7fe15ecfe20c', 'format': 'iframe', 'height': 50, 'width': 320, 'params': {} };`,
+          tagPosition: 'bodyClose',
+          tagPriority: 0,
+        },
+        {
+          src: 'https://www.highperformanceformat.com/3d42be0706682e2b744f7fe15ecfe20c/invoke.js',
+          tagPosition: 'bodyClose',
+          tagPriority: 1,
         }
       ]
     }

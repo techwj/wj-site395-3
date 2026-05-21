@@ -101,13 +101,9 @@ export default defineNuxtConfig({
           tagPriority: 0,
         },*/
         {
-          src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+          src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2554404510173364',
           async: true,
-          crossorigin: 'anonymous',
-          // 注意：client 参数通常通过 data-ad-client 或 query 传递，建议如下写法
-          query: {
-            client: 'ca-pub-2554404510173364'
-          }
+          crossorigin: 'anonymous'
         }
       ]
     }

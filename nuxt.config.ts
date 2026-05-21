@@ -99,12 +99,16 @@ export default defineNuxtConfig({
           innerHTML: `atOptions = { 'key': '3d42be0706682e2b744f7fe15ecfe20c', 'format': 'iframe', 'height': 50, 'width': 320, 'params': {} };`,
           tagPosition: 'bodyClose',
           tagPriority: 0,
-        },
+        },*/
         {
-          src: 'https://www.highperformanceformat.com/3d42be0706682e2b744f7fe15ecfe20c/invoke.js',
-          tagPosition: 'bodyClose',
-          tagPriority: 1,
-        }*/
+          src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+          async: true,
+          crossorigin: 'anonymous',
+          // 注意：client 参数通常通过 data-ad-client 或 query 传递，建议如下写法
+          query: {
+            client: 'ca-pub-2554404510173364'
+          }
+        }
       ]
     }
   },
